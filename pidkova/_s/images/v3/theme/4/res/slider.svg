@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16">
+    <symbol id="btn-large-1" viewBox="0 0 20 20">
+        <path d="M15 17.6L13.66 19 5 10l8.66-9L15 2.4 7.65 10z" transform="translate(-1)"/>
+    </symbol>
+
+    <symbol id="btn-large-2" viewBox="0 0 20 20">
+        <path d="M4.605 11L9 15.6 7.66 17 1 10l6.66-7L9 4.4 4.605 9H19v2z" transform="translate(-1)"/>
+    </symbol>
+
+    <symbol id="btn-large-3" viewBox="0 0 20 20">
+        <path d="M7 9V5l-6 5 6 5v-4h12V9z" transform="translate(-1)"/>
+    </symbol>
+
+    <symbol id="btn-medium-1" viewBox="0 0 20 20">
+        <path d="M15 17.6L13.66 19 5 10l8.66-9L15 2.4 7.65 10z" transform="translate(-1)"/>
+    </symbol>
+
+    <symbol id="btn-medium-2" viewBox="0 0 20 20">
+        <path d="M4.605 11L9 15.6 7.66 17 1 10l6.66-7L9 4.4 4.605 9H19v2z" transform="translate(-1)"/>
+    </symbol>
+
+    <symbol id="btn-medium-3" viewBox="0 0 20 20">
+        <path d="M7 9V5l-6 5 6 5v-4h12V9z" transform="translate(-1)"/>
+    </symbol>
+
+    <symbol id="btn-small-1" viewBox="0 0 20 20" >
+        <path d="M14 15.6L8.65 10 14 4.4 12.66 3 6 10l6.66 7z" transform="translate(-1)"/>
+    </symbol>
+
+    <symbol id="btn-small-2" viewBox="0 0 20 20">
+        <path d="M5.605 11L9 14.6 7.66 16 2 10l5.66-6L9 5.4 5.605 9H18v2z" transform="translate(-1)"/>
+    </symbol>
+
+    <symbol id="btn-small-3" viewBox="0 0 20 20" >
+        <path d="M7 9V6l-5 4 5 4v-3h11V9z" transform="translate(-1)"/>
+    </symbol>
+</svg>

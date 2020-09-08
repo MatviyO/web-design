@@ -1,0 +1,5939 @@
+.container-fluid>.component-bg[data-type=color] .overlay {
+    opacity: 1!important
+}
+
+.b_block:last-of-type .component-bg {
+    height: 100%
+}
+
+.component-bg {
+    overflow: hidden;
+    clip: rect(auto, auto, auto, auto);
+    pointer-events: none;
+    z-index: 0
+}
+
+.is-pointer .component-image[data-effect=zoom] .component-image__image {
+    transition: transform .5s ease;
+    will-change: transform;
+}
+.component-image__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: transform .15s cubic-bezier(.21,.67,.58,1),opacity .55s ease,visibility .55s ease;
+}
+
+.component-bg,
+.component-bg .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.component-bg .overlay {
+    z-index: 2;
+    transition: all .18s
+}
+
+.component-bg .video_bg_container.custom .wide {
+    height: 100%;
+    width: auto
+}
+
+.component-bg .video_bg_container.custom .high {
+    width: 100%;
+    height: auto
+}
+
+.component-bg.bg-video[data-parallax=true] {
+    clip: rect(auto, auto, auto, auto)
+}
+
+.component-bg.bg-image[data-parallax]:not([data-parallax="0"]) .overlay {
+    transition: none
+}
+
+.component-bg.bg-color .image-holder,
+.component-bg.bg-color .video_bg_container {
+    display: none
+}
+
+.component-bg.video_is_loaded .image-holder {
+    opacity: 0;
+    visibility: hidden
+}
+
+.component-bg.video_is_loaded .video_bg_container iframe {
+    opacity: 1
+}
+
+.component-bg .parallax-outer,
+.component-bg .video_bg_container {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.component-bg .video_bg_player {
+    position: relative
+}
+
+.component-bg .video_bg_player video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto
+}
+
+.component-bg .video_bg_player iframe {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.component-bg .image,
+.component-bg .video_bg_player,
+.component-bg canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.component-bg .image {
+    image-rendering: optimizeSpeed;
+    image-rendering: auto;
+    image-rendering: -o-crisp-edges;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor
+}
+
+.component-bg .image-holder {
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    z-index: 1;
+    transition: opacity .3s cubic-bezier(.21, .67, .58, 1), visibility .3s cubic-bezier(.21, .67, .58, 1)
+}
+
+.component-bg .parallax-outer+.image-holder {
+    animation: none!important
+}
+
+.component-bg .parallax-outer.ready+.image-holder {
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: .65s
+}
+
+.component-bg .loader-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s
+}
+
+.component-bg.loading .image {
+    overflow: hidden;
+    position: relative
+}
+
+.component-bg.loading .loader-image {
+    opacity: 1;
+    visibility: visible
+}
+
+@media screen and (min-width:768px) and (min-height:571px),
+screen and (min-width:980px) {
+    .component-bg.bg-video[data-parallax=true] .image-holder,
+    .component-bg.bg-video[data-parallax=true] .video_bg_container {
+        position: fixed
+    }
+    .component-bg.bg-video[data-parallax=true] .image-holder .image,
+    .component-bg.bg-video[data-parallax=true] .image-holder .video_bg_player,
+    .component-bg.bg-video[data-parallax=true] .video_bg_container .image,
+    .component-bg.bg-video[data-parallax=true] .video_bg_container .video_bg_player {
+        transform: translateZ(0);
+        will-change: transform
+    }
+}
+
+@media screen and (max-height:570px) and (max-width:980px) and (orientation:landscape),
+screen and (max-width:767px) {
+    .component-bg .video_bg_container {
+        display: none
+    }
+    .component-bg.video_is_loaded .image-holder {
+        opacity: 1;
+        visibility: visible
+    }
+    .component-bg .image-holder .image,
+    .component-bg .video_bg_player {
+        transform: translateZ(0)!important
+    }
+}
+
+.is-ios .component-bg {
+    transform: translateZ(0);
+    will-change: transform
+}
+
+.component-button.effect--opacity:before {
+    transition: all .2s ease
+}
+
+.is-pointer .component-button.effect--opacity.bordered:hover:before {
+    background-color: currentColor;
+    border-color: transparent
+}
+
+.is-pointer .component-button.effect--opacity.transparent:hover:before {
+    opacity: .3
+}
+
+.component-button.effect--fill:before {
+    transition: all .2s ease
+}
+
+.is-pointer .component-button.effect--fill:hover:before {
+    background-color: currentColor
+}
+
+.component-button.effect--zoom:before {
+    transition: all .3s cubic-bezier(.21, .67, .58, 1)
+}
+
+.is-pointer .component-button.effect--zoom:hover:before {
+    transform: scale(1.03)
+}
+
+.component-button {
+    position: relative;
+    font-size: 15px;
+    background: none;
+    outline: 0;
+    border: 0;
+    display: inline-flex;
+    min-width: 46px;
+    min-height: 46px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    vertical-align: middle;
+    color: inherit;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    --iconMargin: 10px;
+    --iconSize: 16px
+}
+
+.component-button.wide {
+    width: 100%
+}
+
+.component-button:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: inherit
+}
+
+.is-pointer .component-button:hover {
+    text-decoration: none
+}
+
+.component-button .btn-content {
+    --currentColor: currentColor;
+    line-height: 1.467;
+    position: relative;
+    color: var(--currentColor)
+}
+
+.component-button .submitting-status {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .3s ease, visibility .3s ease
+}
+
+.component-button .submitting-status .icon {
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    transform: translate(-50%, -50%)
+}
+
+.component-button .submitting-status .icon .circular-loader {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 6px;
+    transform-origin: center center
+}
+
+.component-button .submitting-status .icon .circular-loader .loader-path {
+    stroke-dasharray: 150, 200;
+    stroke-dashoffset: -10;
+    stroke-linecap: round;
+    animation: circular-loader 1.5s ease-in-out infinite reverse
+}
+
+.component-button .btn-icon {
+    display: block;
+    width: 18px;
+    height: 18px
+}
+
+.component-button .btn-icon svg {
+    max-height: 100%
+}
+
+.component-button .btn-content-icon-text,
+.component-button .btn-content-text {
+    padding: 12px 22px;
+    max-width: 100%
+}
+
+.component-button .btn-content-icon,
+.component-button .btn-content-icon-text {
+    display: flex;
+    align-items: center
+}
+
+.component-button .btn-content-icon-text.icon-on-right,
+.component-button .btn-content-icon.icon-on-right {
+    flex-flow: row-reverse
+}
+
+.component-button .btn-content-icon-text.icon-on-right .component-icon,
+.component-button .btn-content-icon.icon-on-right .component-icon {
+    margin-right: 0;
+    margin-left: var(--iconMargin)
+}
+
+.component-button .btn-content-icon-text .component-icon,
+.component-button .btn-content-icon .component-icon {
+    margin: -20px var(--iconMargin) -20px 0;
+    transition: opacity .2s ease, color .2s ease
+}
+
+.component-button .btn-content-icon-text .component-icon .icon,
+.component-button .btn-content-icon .component-icon .icon {
+    width: 100%;
+    height: 100%
+}
+
+.component-button .btn-content-icon {
+    padding: 0!important;
+    justify-content: center
+}
+
+.component-button .btn-content-icon .component-icon {
+    margin: 0!important
+}
+
+.component-button .btn-text {
+    display: block!important;
+    transition: all .2s
+}
+
+.component-button .success-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    transform: translate3d(-50%, -50%, 0) scale(.6);
+    opacity: 0;
+    visibility: hidden
+}
+
+.component-button.animate-add-to-cart {
+    pointer-events: none
+}
+
+.component-button.animate-add-to-cart .component-icon {
+    transition: none;
+    opacity: 0
+}
+
+.component-button.animate-add-to-cart .success-icon {
+    transition: opacity .45s, visibility .45s, transform .3s cubic-bezier(.25, 1, .1, 3);
+    transform: translate3d(-50%, -50%, 0) scale(1);
+    opacity: 1;
+    visibility: visible;
+    will-change: transform
+}
+
+.component-button.animate-add-to-cart .btn-text {
+    transition: none;
+    opacity: 0;
+    will-change: transform
+}
+
+.component-button.bordered.line_size--small:before {
+    border-width: 1px
+}
+
+.component-button.bordered.line_size--medium:before {
+    border-width: 2px
+}
+
+.component-button.bordered.line_size--large:before {
+    border-width: 3px
+}
+
+.component-button.size--large {
+    font-size: 17px;
+    min-width: 56px;
+    min-height: 56px
+}
+
+.component-button.size--large .btn-content {
+    padding: 16px 30px
+}
+
+.component-button.size--small {
+    font-size: 14px;
+    min-width: 40px;
+    min-height: 40px
+}
+
+.component-button.size--small .btn-content {
+    padding: 10px 20px
+}
+
+.component-button.size--small .btn-content .component-icon {
+    --iconMargin: 8px
+}
+
+.component-button {
+    --currentColor: currentColor
+}
+
+.component-button.filled {
+    border: 0
+}
+
+.component-button.filled:before {
+    background-color: currentColor
+}
+
+.component-button.filled .btn-content {
+    --currentColor: var(--contrastColor)
+}
+
+.component-button.bordered:before {
+    border: 1px solid currentColor
+}
+
+.is-pointer .component-button.bordered.effect--fill:hover:before {
+    border-color: transparent
+}
+
+.component-button .contrast,
+.component-button .contrast.filled:before {
+    color: var(--currentColor)!important
+}
+
+.component-button.text--light .btn-content {
+    --currentColor: var(--lightColor)!important
+}
+
+.component-button.text--light .btn-text {
+    color: var(--currentColor)!important
+}
+
+.is-pointer .component-button.text--light.filled:hover .btn-content {
+    --currentColor: var(--lightColor)!important
+}
+
+.component-button.text--dark .btn-content {
+    --currentColor: var(--darkColor)!important
+}
+
+.component-button.text--dark .btn-text {
+    color: var(--currentColor)!important
+}
+
+.is-pointer .component-button.text--dark.filled:hover .btn-content {
+    --currentColor: var(--darkColor)!important
+}
+
+.is-pointer .component-button.text--dark.bordered.effect--fill:hover .btn-text,
+.is-pointer .component-button.text--light.bordered.effect--fill:hover .btn-text {
+    color: inherit
+}
+
+.component-button.transparent:before {
+    opacity: .2;
+    will-change: opacity
+}
+
+.component-button.transparent .btn-content {
+    color: currentColor!important
+}
+
+.component-button.squared:before {
+    border-radius: 4px
+}
+
+.component-button.rounded:before {
+    border-radius: 100px
+}
+
+.component-button.weight--light {
+    font-weight: 300
+}
+
+.component-button.weight--normal {
+    font-weight: 400
+}
+
+.component-button.weight--medium {
+    font-weight: 500
+}
+
+.component-button.weight--bold {
+    font-weight: 700
+}
+
+.cards-1 .flexbe-card,
+.flexbe-cards .flexbe-card.card-1 {
+    flex-basis: 100%;
+    max-width: 100%
+}
+
+.cards-2 .flexbe-card,
+.flexbe-cards .flexbe-card.card-2 {
+    flex-basis: 50%;
+    max-width: 50%
+}
+
+.cards-3 .flexbe-card,
+.flexbe-cards .flexbe-card.card-3 {
+    flex-basis: 33.33333333%;
+    max-width: 33.33333333%
+}
+
+.cards-4 .flexbe-card,
+.flexbe-cards .flexbe-card.card-4 {
+    flex-basis: 25%;
+    max-width: 25%
+}
+
+.cards-5 .flexbe-card,
+.flexbe-cards .flexbe-card.card-5 {
+    flex-basis: 20%;
+    max-width: 20%
+}
+
+.cards-6 .flexbe-card,
+.flexbe-cards .flexbe-card.card-6 {
+    flex-basis: 16.66666667%;
+    max-width: 16.66666667%
+}
+
+.flexbe-cards-root {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    flex-shrink: 0
+}
+
+.flexbe-cards-root.full-width {
+    padding: 0 calc(var(--gapSize) * 2)
+}
+
+.flexbe-cards-root.full-width .slider-button--cards[data-direction=prev] {
+    left: 0;
+    right: auto
+}
+
+.flexbe-cards-root.full-width .slider-button--cards[data-direction=next] {
+    right: 0;
+    left: auto
+}
+
+@media (min-width:1024px) and (max-width:1100px),
+(min-width:1200px) and (max-width:1330px) {
+    .flexbe-cards-root.normal-width .slider-button--cards[data-direction=prev] {
+        padding-left: 0;
+        padding-right: 10px
+    }
+    .flexbe-cards-root.normal-width .slider-button--cards[data-direction=next] {
+        padding-left: 10px;
+        padding-right: 0
+    }
+}
+
+@media (min-width:1200px) and (max-width:1275px) {
+    .flexbe-cards-root.normal-width.slider-active.slider-has-buttons .flexbe-cards-container {
+        max-width: 1050px;
+        flex-grow: 0;
+        margin: 0 auto
+    }
+}
+
+@media (min-width:768px) and (max-width:1080px) {
+    .flexbe-cards-root.normal-width .slider-button--cards[data-direction=prev] {
+        padding: 0;
+        margin-right: -25px
+    }
+    .flexbe-cards-root.normal-width .slider-button--cards[data-direction=next] {
+        padding: 0;
+        margin-left: -25px
+    }
+}
+
+.flexbe-cards-container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    z-index: 1;
+    flex-flow: row wrap
+}
+
+.flexbe-cards-wrapper {
+    width: 100%
+}
+
+.flexbe-cards-slider .swiper-slide-hidden * {
+    pointer-events: none!important
+}
+
+.flexbe-cards-slider.swiper-effect-fade {
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden
+}
+
+.no-overflow .flexbe-cards-slider.swiper-effect-slide .swiper-slide {
+    opacity: 1;
+    transition-property: opacity, visibility;
+    transition-timing-function: cubic-bezier(.64, .13, .43, .99);
+    transition-duration: .65s!important;
+    transition-delay: 0s!important
+}
+
+.no-overflow .flexbe-cards-slider.swiper-effect-slide .swiper-slide-hidden {
+    cursor: pointer
+}
+
+.is-pointer .no-overflow .flexbe-cards-slider.swiper-effect-slide .swiper-slide-hidden:hover {
+    opacity: .8;
+    transition: opacity .18s ease
+}
+
+.no-overflow--opacity .flexbe-cards-slider.swiper-effect-slide .swiper-slide-hidden {
+    opacity: .55
+}
+
+.flexbe-cards {
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-flow: row wrap
+}
+
+.flexbe-cards.less-columns {
+    justify-content: center
+}
+
+.flexbe-card {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0
+}
+
+.flexbe-cards-root .slider-pagination--cards {
+    width: 100%;
+    position: relative
+}
+
+.flexbe-cards-root .slider-pagination--cards.size--small {
+    margin: 20px auto
+}
+
+.flexbe-cards-root .slider-pagination--cards.position--inside {
+    padding: 0 0 15px
+}
+
+.flexbe-cards-root .slider-pagination--cards.position--outside {
+    padding: 25px 0 0
+}
+
+.flexbe-cards-root .slider-button--cards {
+    padding: 0 20px
+}
+
+.flexbe-cards-root .slider-button--cards[data-direction=prev] {
+    left: auto;
+    right: 100%
+}
+
+.flexbe-cards-root .slider-button--cards[data-direction=next] {
+    right: auto;
+    left: 100%
+}
+
+.flexbe-cards-root.slider-disabled .slider-button,
+.flexbe-cards-root.slider-disabled .slider-pagination {
+    display: none
+}
+
+.header-cart-products-list-holder {
+    width: auto;
+    min-width: 300px;
+    max-width: 320px;
+    position: absolute;
+    z-index: 15
+}
+
+.header-cart-products-list-content {
+    font-size: 14px;
+    line-height: 18px;
+    color: #30343b;
+    background: #fff;
+    border-radius: 3px;
+    position: relative;
+    animation: slideUp .3s ease-out 1;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .08)
+}
+
+.header-cart-products-list-content.fade-out {
+    animation: fadeOut .18s ease-out 1 forwards
+}
+
+.header-cart-products-list-content .text-gray {
+    color: rgba(48, 52, 59, .57)
+}
+
+.header-cart-products-list-content .text-medium {
+    font-weight: 500
+}
+
+.header-cart-products-list-content .empty-text {
+    padding: 20px;
+    text-align: center
+}
+
+.header-cart-products-list-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px
+}
+
+.header-cart-products-list-button {
+    padding: 20px;
+    background: rgba(48, 52, 59, .05)
+}
+
+.header-cart-products-list {
+    margin: 0;
+    padding: 0 20px;
+    border-top: 1px solid rgba(48, 52, 59, .05);
+    border-bottom: 1px solid rgba(48, 52, 59, .05);
+    max-height: 395px;
+    overflow-y: auto;
+    -ms-scroll-chaining: none;
+    overscroll-behavior: contain
+}
+
+.header-cart-products-list-item {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 15px 0
+}
+
+.header-cart-products-list-item:not(:first-child) {
+    border-top: 1px solid rgba(48, 52, 59, .05)
+}
+
+.header-cart-products-list-item .title {
+    max-width: 225px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.header-cart-products-list-item .price {
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 10px
+}
+
+.component-form .component-button.submitting .btn-text,
+.component-form .component-button.submitting .component-icon,
+.component-quiz .component-button.submitting .btn-text,
+.component-quiz .component-button.submitting .component-icon {
+    opacity: 0
+}
+
+.component-form .component-button.submitting .submitting-status,
+.component-quiz .component-button.submitting .submitting-status {
+    display: block;
+    opacity: 1;
+    visibility: visible
+}
+
+.component-form .component-button.submitting .submitting-status svg,
+.component-quiz .component-button.submitting .submitting-status svg {
+    transform: scale(1)
+}
+
+.component-form .component-button.success .btn-text,
+.component-form .component-button.success .component-icon,
+.component-quiz .component-button.success .btn-text,
+.component-quiz .component-button.success .component-icon {
+    opacity: 0
+}
+
+.component-form .component-button.success .success-icon,
+.component-quiz .component-button.success .success-icon {
+    transition: opacity .45s, visibility .45s, transform .3s cubic-bezier(.25, 1, .1, 3);
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(-50%, -50%, 0) scale(1)
+}
+
+.form-field-delivery-item {
+    display: block;
+    position: relative;
+    width: 100%;
+    border: 1px solid transparent;
+    min-height: 46px;
+    font-size: 15px;
+    line-height: 1.466;
+    font-weight: 400;
+    padding: 12px 15px;
+    word-break: keep-all;
+    margin-bottom: 10px;
+    cursor: pointer
+}
+
+.form-field-delivery-item:last-child {
+    margin-bottom: 0
+}
+
+.form-field-delivery-item--only {
+    cursor: default
+}
+
+.form-field-delivery-item--only .form-field-delivery-item__box {
+    border: 0;
+    background: currentColor;
+    opacity: .05!important
+}
+
+.form-field-delivery-item--only .form-field-delivery-item__arrow {
+    display: none
+}
+
+.form-field-delivery-item__box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    border-radius: 4px;
+    border: 1px solid currentColor;
+    opacity: .15;
+    pointer-events: none;
+    transition: all .3s ease
+}
+
+.form-field-delivery-item__title {
+    font-weight: 400;
+    padding-right: 20px
+}
+
+.form-field-delivery-item__title .delimiter,
+.form-field-delivery-item__title .item-price {
+    font-weight: 400;
+    opacity: .7
+}
+
+.form-field-delivery-item__title .delimiter {
+    margin: 0 1ex
+}
+
+.form-field-delivery-item__desc {
+    font-size: 13px;
+    line-height: 1.23076923;
+    margin-top: 8px;
+    opacity: .5;
+    white-space: pre-wrap
+}
+
+.form-field-delivery-item__min-total {
+    display: flex;
+    justify-items: center;
+    font-size: 13px;
+    line-height: 1.23076923;
+    color: #000;
+    margin-top: 10px
+}
+
+.form-field-delivery-item__min-total span {
+    margin-left: 5px
+}
+
+.form-field-delivery-item__input {
+    display: none
+}
+
+.form-field-delivery-item__input:checked~.form-field-delivery-item__box {
+    border-width: 2px;
+    opacity: 1
+}
+
+.form-field-delivery-item__input:checked~.form-field-delivery-item__arrow {
+    opacity: 1;
+    visibility: visible
+}
+
+.form-field-delivery-item__input:checked~.form-field-delivery-item__title {
+    font-weight: 500
+}
+
+.form-field-delivery-item__min-total {
+    opacity: .5
+}
+
+.form-field-delivery-item--blocked {
+    background: rgba(34, 17, 34, .02);
+    cursor: default
+}
+
+.form-field-delivery-item--blocked .form-field-delivery-item__input:checked~.form-field-delivery-item__box {
+    border-width: 2px;
+    opacity: .4
+}
+
+.form-field-delivery-item--blocked .form-field-delivery-item__input:checked~.form-field-delivery-item__arrow {
+    opacity: .4;
+    visibility: visible
+}
+
+.form-field-delivery-item--blocked .form-field-delivery-item__input:checked~.form-field-delivery-item__title {
+    opacity: .7
+}
+
+.form-field-delivery-item--blocked .form-field-delivery-item__min-total {
+    opacity: 1
+}
+
+.form-field-delivery-item__arrow {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 0;
+    transition: all .3s ease
+}
+
+.form-field-delivery-fields {
+    padding: 20px 0 0;
+    display: none
+}
+
+.form-field-delivery-fields--active {
+    display: block
+}
+
+.form-field-title {
+    font-size: 16px;
+    line-height: 1.375;
+    padding-bottom: 10px;
+    font-weight: 500;
+    text-align: left;
+    order: -2
+}
+
+.form-field-desc {
+    font-size: 12px;
+    padding-bottom: 10px;
+    opacity: .5;
+    line-height: 1.333;
+    order: -1
+}
+
+.form-field-desc+.form-field-title {
+    padding-bottom: 5px
+}
+
+.form-field {
+    text-align: left
+}
+
+.form-field[data-type=hidden] {
+    display: none!important
+}
+
+.form-field[data-type=checkbox]+[data-type=checkbox] {
+    margin-top: -10px
+}
+
+.form-field.active .dropdown-select:after {
+    transform: translateY(-50%) rotate(180deg);
+    z-index: 21;
+    opacity: 0
+}
+
+.form-field-radio {
+    display: flex;
+    flex-direction: column
+}
+
+.form-field-radio .form-field-title {
+    display: block
+}
+
+.form-field-radio-item {
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.form-field-radio-item:last-child {
+    margin-bottom: 0
+}
+
+.form-field-radio-item .form-field-radio-item__text {
+    text-align: left;
+    line-height: 22px
+}
+
+.is-pointer .form-field-radio-item:hover .form-field-radio-item__check {
+    opacity: 1
+}
+
+.form-field-radio-item__check {
+    flex-shrink: 0;
+    opacity: .5;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    transition: opacity .3s ease
+}
+
+.form-field-radio-item__check,
+.form-field-radio-item__check:before {
+    display: block;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    box-sizing: border-box;
+    margin-right: 10px
+}
+
+.form-field-radio-item__check:before {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: 5px;
+    top: 5px;
+    transition: all .3s ease
+}
+
+.form-field-radio-item__input {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none
+}
+
+.form-field-radio-item__input:checked+.form-field-radio-item__check,
+.form-field-radio-item__input:checked+.form-field-radio-item__check:before {
+    opacity: 1
+}
+
+.form-field-range {
+    display: flex;
+    flex-flow: column-reverse;
+    flex-grow: 1
+}
+
+.form-field-range .form-field-title {
+    order: 0
+}
+
+.form-field-range .form-field-desc {
+    order: 1
+}
+
+.form-field-range .range-outer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 12px;
+    height: 24px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer
+}
+
+.form-field-range .range-outer:not(.animated) .range-value {
+    transition: none!important
+}
+
+.form-field-range .range-outer .range-value {
+    transition: width .25s cubic-bezier(.64, .13, .43, .99), margin .25s cubic-bezier(.64, .13, .43, .99)
+}
+
+.form-field-range .range-outer.active-animation .range-value {
+    transition: width .1s ease, margin .1s ease
+}
+
+.form-field-range .range-outer.active-animation.animation-speed-10 .range-value {
+    transition-duration: .3s
+}
+
+.form-field-range .range-outer.active-animation.animation-speed-9 .range-value {
+    transition-duration: .26s
+}
+
+.form-field-range .range-outer.active-animation.animation-speed-8 .range-value {
+    transition-duration: .24s
+}
+
+.form-field-range .range-outer.active-animation.animation-speed-7 .range-value {
+    transition-duration: .2s
+}
+
+.form-field-range .range-outer.active-animation.animation-speed-6 .range-value {
+    transition-duration: .18s
+}
+
+.form-field-range .range-outer.active-animation.animation-speed-5 .range-value {
+    transition-duration: .16s
+}
+
+.form-field-range .range-outer.active-animation.animation-speed-4 .range-value {
+    transition-duration: .14s
+}
+
+.form-field-range .range-outer.active-animation.animation-speed-3 .range-value {
+    transition-duration: .12s
+}
+
+.form-field-range .range-outer.active-animation.animation-speed-2 .range-value {
+    transition-duration: .1s
+}
+
+.form-field-range .range-legend {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 0 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 12px;
+    font-weight: 500
+}
+
+.form-field-range .range-legend .range-legend-inner {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between
+}
+
+.form-field-range .range-legend .legend-point {
+    cursor: pointer;
+    min-width: calc(12px * 2);
+    text-align: center
+}
+
+.form-field-range .range-legend.complex {
+    padding: 0 12px
+}
+
+.form-field-range .range-legend.complex .legend-point {
+    flex-grow: 1;
+    position: relative;
+    text-align: center;
+    flex-basis: 100%;
+    min-width: 9.09%
+}
+
+.form-field-range .range-legend.complex[data-count="10"] .range-legend-inner {
+    margin: 0 -5%
+}
+
+.form-field-range .range-legend.complex[data-count="9"] .range-legend-inner {
+    margin: 0 -5.55555556%
+}
+
+.form-field-range .range-legend.complex[data-count="8"] .range-legend-inner {
+    margin: 0 -6.25%
+}
+
+.form-field-range .range-legend.complex[data-count="7"] .range-legend-inner {
+    margin: 0 -7.14285714%
+}
+
+.form-field-range .range-legend.complex[data-count="6"] .range-legend-inner {
+    margin: 0 -8.33333333%
+}
+
+.form-field-range .range-legend.complex[data-count="5"] .range-legend-inner {
+    margin: 0 -10%
+}
+
+.form-field-range .range-legend.complex[data-count="4"] .range-legend-inner {
+    margin: 0 -12.5%
+}
+
+.form-field-range .range-legend.complex[data-count="3"] .range-legend-inner {
+    margin: 0 -16.66666667%
+}
+
+.form-field-range .range-legend.limits .legend-point {
+    min-width: calc(12px * 2);
+    text-align: center
+}
+
+.form-field-range input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none
+}
+
+.form-field-range .range-area {
+    width: 100%;
+    height: 2px;
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 0;
+    z-index: 1
+}
+
+.form-field-range .range-area:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -12px;
+    right: -12px;
+    height: 100%;
+    top: 0;
+    background-color: currentColor;
+    opacity: .2
+}
+
+.form-field-range .range-value {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0
+}
+
+.form-field-range .range-value:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: currentColor;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: -11px
+}
+
+.form-field-range .range-runner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    transform: translate(-50%, -50%);
+    margin-top: 1px;
+    background-color: currentColor;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: width .3s ease, height .3s ease
+}
+
+.form-field-range .range-runner .runner-tip {
+    display: flex;
+    position: absolute;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    color: #fff;
+    padding: 0 8px;
+    height: 24px;
+    top: -20px;
+    background-color: #1b1b1c;
+    opacity: 0;
+    border-radius: 3px;
+    transition: top .3s ease, opacity .3s ease, transform .15s linear
+}
+
+.form-field-range .range-runner .runner-tip .prefix {
+    margin-right: 5px;
+    opacity: .65
+}
+
+.form-field-range .range-runner .runner-tip .suffix {
+    margin-left: 5px;
+    opacity: .65
+}
+
+.form-field-range .range-runner.upper-runner {
+    z-index: 1
+}
+
+.form-field-range .range-runner.active .runner-tip,
+.is-pointer .form-field-range .range-runner:hover .runner-tip {
+    opacity: 1;
+    top: -30px
+}
+
+.form-field-range .range-runner-right {
+    right: 0;
+    transform: translate(50%, -50%)
+}
+
+.form-field-checkbox-item {
+    display: flex;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.form-field-checkbox-item .error {
+    display: none
+}
+
+.is-pointer .form-field-checkbox-item:hover .form-field-checkbox-item__box {
+    opacity: 1
+}
+
+.form-field-checkbox-item__name {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 22px;
+    text-align: left
+}
+
+.form-field-checkbox-item__box {
+    flex-shrink: 0;
+    display: block;
+    position: relative;
+    opacity: .5;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    border: 2px solid currentColor;
+    box-sizing: border-box;
+    margin-right: 10px;
+    transition: opacity .3s ease
+}
+
+.form-field-checkbox-item__box i {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    transition: all .15s ease
+}
+
+.form-field-checkbox-item__box i:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 6px;
+    width: 12px;
+    top: 5px;
+    left: 3px;
+    transform: rotate(-45deg);
+    border: 2px solid currentColor;
+    border-top: 0;
+    border-right: 0;
+    box-sizing: border-box;
+    margin-right: 10px;
+    transition: all .05s
+}
+
+.form-field-checkbox-item__input {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.form-field-checkbox-item__input:checked+.form-field-checkbox-item__box {
+    opacity: 1
+}
+
+.form-field-checkbox-item__input:checked+.form-field-checkbox-item__box i {
+    opacity: 1;
+    width: 100%;
+    animation: checkAppearance .3s
+}
+
+.form-field-checkbox-item__input:focus+.form-field-checkbox-item__box {
+    opacity: 1
+}
+
+.form-field-text {
+    position: relative;
+    width: 100%;
+    text-align: left
+}
+
+.form-field-text__wrap {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%
+}
+
+.form-field-text__input {
+    display: block;
+    width: 100%;
+    border: 1px solid transparent;
+    min-height: 46px;
+    line-height: 1.466;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 12px 25px 11px 15px;
+    word-break: keep-all;
+    border-radius: 4px;
+    transition: all .3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+.form-field-date__input {
+    padding-right: 40px
+}
+
+.form-field-text__textarea {
+    resize: none;
+    min-height: 46px;
+    max-height: 250px;
+    overflow: hidden;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+.form-field-text__textarea.scrollable {
+    overflow: auto
+}
+
+.form-field-text__textarea::-webkit-scrollbar {
+    width: 3px;
+    height: 90%
+}
+
+.form-field-text__textarea::-webkit-scrollbar-track {
+    background: 0
+}
+
+.form-field-text__textarea::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 3px
+}
+
+.f-calendar__input-overlay {
+    position: absolute;
+    height: 46px;
+    bottom: 0;
+    width: 100%;
+    cursor: text;
+    z-index: 3
+}
+
+.form-field-date__icon {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    opacity: .4;
+    z-index: 2;
+    transition: opacity .3s ease
+}
+
+.form-field-date__icon.focus,
+.form-field-date__icon:hover {
+    opacity: .6
+}
+
+.form-field-select {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column
+}
+
+.form-field-select .arrow {
+    display: block;
+    position: absolute;
+    margin-top: -3px;
+    top: 50%;
+    right: 15px;
+    width: 10px;
+    height: 6px;
+    transition: all .3s ease;
+    color: currentColor;
+    line-height: .4
+}
+
+.form-field-select .arrow svg {
+    display: block
+}
+
+.form-field-select .select-outer {
+    position: relative;
+    min-height: 46px
+}
+
+.form-field-select .atom-custom-select {
+    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+.form-field-select .dropdown-container {
+    min-height: 46px
+}
+
+.form-field-select .dropdown-select {
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    border: 1px solid transparent;
+    width: 100%;
+    border: 0;
+    min-height: 46px;
+    font-size: 15px;
+    line-height: 1.466;
+    font-weight: 400;
+    padding: 0 15px;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #1b1b1c;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.form-field-select .dropdown-select .selected {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 20px
+}
+
+.is-pointer .form-field-select .dropdown-select:hover .arrow {
+    opacity: 1
+}
+
+.form-field-file {
+    display: flex;
+    flex-direction: column
+}
+
+.form-field-file .file-input-outer {
+    position: relative;
+    padding-top: 0;
+    transition: padding .3s ease
+}
+
+.form-field-file .file-input-outer.active {
+    padding-top: 32px
+}
+
+.form-field-file .file-input-outer.active .file-list {
+    opacity: 1;
+    visibility: visible;
+    height: auto
+}
+
+.form-field-file .file-list {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transition: all .3s ease
+}
+
+.form-field-file .file-item .icon {
+    opacity: .5;
+    transition: opacity .3s ease
+}
+
+.is-pointer .form-field-file .file-item:hover .icon {
+    opacity: .8
+}
+
+.form-field-file .file-item--title {
+    max-width: calc(100% - 85px);
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: break-word;
+    text-overflow: ellipsis
+}
+
+.form-field-file .clear-files {
+    margin-left: 10px;
+    opacity: .4;
+    white-space: nowrap;
+    transition: opacity .3s ease;
+    font-size: 12px;
+    border-bottom: 1px solid currentColor;
+    line-height: 1.333;
+    display: flex;
+    align-items: center
+}
+
+.is-pointer .form-field-file .clear-files:hover {
+    opacity: .8
+}
+
+.form-field-file .file-input,
+.form-field-file .file-item {
+    display: flex;
+    cursor: pointer;
+    color: currentColor;
+    font-size: 15px;
+    line-height: 22px;
+    align-items: center
+}
+
+.form-field-file .file-input .icon,
+.form-field-file .file-item .icon {
+    display: inline-block;
+    max-height: 22px;
+    height: 22px;
+    margin-right: 10px;
+    width: 22px;
+    text-align: center
+}
+
+.form-field-file .file-input .icon svg,
+.form-field-file .file-item .icon svg {
+    height: 100%
+}
+
+.form-field-file .file-input--original,
+.form-field-file .file-item--original {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.form-field-file .file-input {
+    min-height: 22px;
+    transition: opacity .3s ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.form-field-file .file-input:hover {
+    opacity: .5
+}
+
+.form-field-file .error {
+    display: none
+}
+
+.form-fields,
+.quiz-fields {
+    justify-content: inherit
+}
+
+.form-fields .error,
+.quiz-fields .error {
+    position: relative;
+    width: 100%;
+    font-size: 10px;
+    line-height: 15px;
+    height: 0;
+    font-weight: 500;
+    color: #ff714d;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s cubic-bezier(.21, .67, .58, 1)
+}
+
+.form-fields .border,
+.quiz-fields .border {
+    display: none
+}
+
+.form-fields .is_error.animate,
+.quiz-fields .is_error.animate {
+    animation: shake .5s ease 1 both .2s
+}
+
+.form-fields .is_error .error,
+.quiz-fields .is_error .error {
+    height: 15px;
+    padding-top: 3px;
+    pointer-events: all;
+    opacity: 1;
+    visibility: visible
+}
+
+.form-fields .is_error .file-input .icon,
+.quiz-fields .is_error .file-input .icon {
+    color: #ff714d
+}
+
+.form-fields .is_error .form-field-checkbox-item__box,
+.quiz-fields .is_error .form-field-checkbox-item__box {
+    opacity: 1;
+    border-color: #ff714d
+}
+
+.form-fields .form-field {
+    padding: 0 0 20px
+}
+
+.form-fields .form-field:last-child {
+    padding-bottom: 0!important
+}
+
+.form-fields.all-fields-empty:not(.has-error) {
+    animation: shake .5s ease 1 both .2s
+}
+
+.quiz-fields .form-field-text__input {
+    min-height: 56px;
+    line-height: 1.333;
+    font-size: 16px
+}
+
+.quiz-fields .form-field-date__icon {
+    bottom: 20px
+}
+
+.quiz-fields .f-calendar__input-overlay {
+    height: 56px
+}
+
+.quiz-fields .form-field-radio-item {
+    padding: 8px 0;
+    margin-bottom: 0;
+    align-items: center
+}
+
+.quiz-fields .form-field-radio-item:last-child {
+    padding-bottom: 0
+}
+
+.quiz-fields .form-field-radio-item:first-child {
+    padding-top: 0
+}
+
+.quiz-fields .form-field-radio-item__check {
+    width: 28px;
+    height: 28px;
+    margin-right: 18px
+}
+
+.quiz-fields .form-field-radio-item__check:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.quiz-fields .form-field-radio-item__text {
+    line-height: 28px
+}
+
+.quiz-fields .form-field-checkbox-item {
+    align-items: center;
+    padding: .5rem 0
+}
+
+.quiz-fields .form-field-checkbox-item__box {
+    width: 28px;
+    height: 28px;
+    margin-right: 15px
+}
+
+.quiz-fields .form-field-checkbox-item__box i:before {
+    height: 9px;
+    width: 15px;
+    top: 5px;
+    left: 4px
+}
+
+.quiz-fields .form-field-checkbox-item__name {
+    line-height: 28px
+}
+
+.quiz-fields .form-field-select .dropdown-container,
+.quiz-fields .form-field-select .select-outer {
+    min-height: 56px
+}
+
+.quiz-fields .form-field-select .dropdown-select {
+    min-height: 56px;
+    font-size: 16px;
+    line-height: 1.333
+}
+
+.quiz-fields .form-field-select .arrow {
+    width: 14px;
+    height: 8px
+}
+
+.quiz-fields .form-field-file .file-input {
+    min-height: 28px
+}
+
+.style-filled .form-field-date__icon,
+.style-filled .form-field-text__input,
+.style-filled .form-field-text__textarea {
+    color: #1b1b1c
+}
+
+.style-transparent .dropdown-select,
+.style-transparent .form-field-text__input {
+    color: currentColor
+}
+
+.style-transparent .form-field-select .arrow {
+    opacity: .5
+}
+
+.style-underlined.inline .form-field-select .form-field-desc {
+    display: none
+}
+
+.style-underlined .form-fields .error {
+    position: absolute;
+    top: 100%;
+    left: 0
+}
+
+.style-underlined .form-fields .form-field.is_error .border {
+    color: #ff714d
+}
+
+.style-underlined .form-fields .form-field[data-type=email],
+.style-underlined .form-fields .form-field[data-type=name],
+.style-underlined .form-fields .form-field[data-type=phone],
+.style-underlined .form-fields .form-field[data-type=text],
+.style-underlined .form-fields .form-field[data-type=textarea],
+.style-underlined .form-fields .form-field[data-type^=date] {
+    padding-top: 10px;
+    padding-bottom: 30px
+}
+
+.style-underlined .form-fields .form-field[data-type=email] .form-field-text__input,
+.style-underlined .form-fields .form-field[data-type=name] .form-field-text__input,
+.style-underlined .form-fields .form-field[data-type=phone] .form-field-text__input,
+.style-underlined .form-fields .form-field[data-type=text] .form-field-text__input,
+.style-underlined .form-fields .form-field[data-type=textarea] .form-field-text__input,
+.style-underlined .form-fields .form-field[data-type^=date] .form-field-text__input {
+    border: 0
+}
+
+.style-underlined .form-fields .form-field[data-type=checkbox],
+.style-underlined .form-fields .form-field[data-type=file],
+.style-underlined .form-fields .form-field[data-type=radio] {
+    padding-bottom: 20px
+}
+
+.style-underlined .form-fields .form-field-title {
+    font-size: 14px
+}
+
+.style-underlined .form-fields .form-field-text .form-field-title {
+    position: absolute;
+    font-size: 16px;
+    line-height: 20px;
+    bottom: 12px;
+    padding: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    transition: all .3s ease;
+    transform: translateZ(0);
+    will-change: transform
+}
+
+.style-underlined .form-fields .form-field-text .form-field-desc {
+    display: none
+}
+
+.style-underlined .form-fields .form-field-text .border {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    border: 0;
+    height: 1px;
+    opacity: .5;
+    color: inherit;
+    background: currentColor;
+    transition: opacity .3s ease;
+    transform: translateZ(0);
+    will-change: transform
+}
+
+.style-underlined .form-fields .form-field-text__input {
+    border-radius: 0;
+    background-color: transparent;
+    color: currentColor;
+    padding-left: 0;
+    padding-right: 0;
+    opacity: .5
+}
+
+.style-underlined .form-fields .form-field-text__input.focus,
+.style-underlined .form-fields .form-field-text__input:focus,
+.style-underlined .form-fields .form-field-text__input:valid,
+.style-underlined .form-fields .form-field-text__input[value]:not([value=""]) {
+    box-shadow: none;
+    opacity: 1
+}
+
+.style-underlined .form-fields .form-field-text__input.focus~.form-field-title,
+.style-underlined .form-fields .form-field-text__input:focus~.form-field-title,
+.style-underlined .form-fields .form-field-text__input:valid~.form-field-title,
+.style-underlined .form-fields .form-field-text__input[value]:not([value=""])~.form-field-title {
+    bottom: 100%;
+    font-size: 14px;
+    line-height: 16px;
+    height: 1rem;
+    opacity: .5
+}
+
+.style-underlined .form-fields .form-field-text__input.focus+.border,
+.style-underlined .form-fields .form-field-text__input:focus+.border,
+.style-underlined .form-fields .form-field-text__input:valid+.border,
+.style-underlined .form-fields .form-field-text__input[value]:not([value=""])+.border {
+    opacity: 1
+}
+
+.style-underlined .form-fields .form-field-text__textarea {
+    max-height: 250px;
+    padding: 0 0 12px;
+    min-height: 34px;
+    margin-top: 12px
+}
+
+.style-underlined .form-fields .form-field-text__textarea::-webkit-scrollbar {
+    width: 3px;
+    height: 90%
+}
+
+.style-underlined .form-fields .form-field-text__textarea::-webkit-scrollbar-track {
+    background: 0
+}
+
+.style-underlined .form-fields .form-field-text__textarea::-webkit-scrollbar-thumb {
+    background-color: currentColor;
+    border-radius: 3px;
+    opacity: .2
+}
+
+.style-underlined .form-fields .form-field-date .form-field-title {
+    padding-right: 20px
+}
+
+.style-underlined .form-fields .form-field-date__icon {
+    right: 1px
+}
+
+.style-underlined .form-fields .form-field-date__input {
+    padding-right: 20px
+}
+
+.style-underlined .form-fields .form-field-select {
+    margin-top: 0
+}
+
+.style-underlined .form-fields .form-field-select .form-field-title {
+    font-size: 14px;
+    line-height: 16px;
+    padding-bottom: 0
+}
+
+.style-underlined .form-fields .form-field-select .form-field-desc {
+    padding-bottom: 0
+}
+
+.style-underlined .form-fields .form-field-select .form-field-desc+.form-field-title {
+    padding-bottom: 5px
+}
+
+.style-underlined .form-fields .form-field-select .arrow {
+    right: 10px
+}
+
+.style-underlined .form-fields .dropdown-select {
+    background-color: transparent;
+    border-radius: 0;
+    color: currentColor;
+    padding-left: 0;
+    padding-right: 0;
+    transition: all .3s ease
+}
+
+.style-underlined .form-fields .dropdown-select:after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid currentColor;
+    opacity: 1
+}
+
+.style-underlined .form-fields .dropdown-select:focus {
+    box-shadow: none
+}
+
+.style-underlined .form-fields .dropdown-select:focus:after {
+    opacity: .5
+}
+
+.atom-select {
+    visibility: hidden;
+    color: #1b1b1c;
+    z-index: 20
+}
+
+.atom-select .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto
+}
+
+.atom-select .dropdown-select-ul {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    top: 0;
+    z-index: 20;
+    padding: 0;
+    max-height: 234px;
+    overflow-y: auto;
+    opacity: 0;
+    list-style: none;
+    transition-delay: .1s;
+    transition: opacity .18s cubic-bezier(.21, .67, .58, 1), transform .3s cubic-bezier(.21, .67, .58, 1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .08);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.atom-select .dropdown-select-ul.sharp {
+    border-radius: 0
+}
+
+.atom-select .dropdown-select-ul .option-e {
+    padding-left: 15px
+}
+
+.atom-select .dropdown-select-ul .option-e.selected {
+    color: rgba(27, 27, 28, .49)
+}
+
+.is-pointer .atom-select .dropdown-select-ul .option-e:hover {
+    background-color: #f4f4f4
+}
+
+.is-pointer .atom-select .dropdown-select-ul .option-e:hover .option-inner {
+    border-color: #f4f4f4
+}
+
+.atom-select .dropdown-select-ul .option-inner {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    border: 0;
+    min-height: 46px;
+    line-height: 1.466;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0;
+    border-bottom: 1px solid hsla(0, 0%, 59%, .1026);
+    box-sizing: content-box
+}
+
+.atom-select .dropdown-select-ul::-webkit-scrollbar {
+    width: 3px;
+    height: 90%
+}
+
+.atom-select .dropdown-select-ul::-webkit-scrollbar-track {
+    background: 0
+}
+
+.atom-select .dropdown-select-ul::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 3px
+}
+
+.atom-select.active {
+    visibility: visible
+}
+
+.atom-select.active .dropdown-select-ul {
+    opacity: 1;
+    transform: translateZ(0)
+}
+
+.atom-select.size--large .option-inner {
+    min-height: 56px;
+    line-height: 1.334;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0
+}
+
+[data-contrast=dark] .style-filled .dropdown-select,
+[data-contrast] [data-contrast=dark] .style-filled .dropdown-select {
+    padding: .75rem calc(15px - 1px) .6875rem
+}
+
+[data-contrast=dark] .style-filled .dropdown-select,
+[data-contrast=dark] .style-filled .form-field-text__input,
+[data-contrast] [data-contrast=dark] .style-filled .dropdown-select,
+[data-contrast] [data-contrast=dark] .style-filled .form-field-text__input {
+    border: 1px solid rgba(27, 27, 28, .15);
+    transition: all .3s cubic-bezier(.21, .67, .58, 1)
+}
+
+[data-contrast=dark] .style-filled .dropdown-select:focus,
+[data-contrast=dark] .style-filled .dropdown-select:hover,
+[data-contrast=dark] .style-filled .form-field-text__input:focus,
+[data-contrast=dark] .style-filled .form-field-text__input:hover,
+[data-contrast] [data-contrast=dark] .style-filled .dropdown-select:focus,
+[data-contrast] [data-contrast=dark] .style-filled .dropdown-select:hover,
+[data-contrast] [data-contrast=dark] .style-filled .form-field-text__input:focus,
+[data-contrast] [data-contrast=dark] .style-filled .form-field-text__input:hover {
+    border: 1px solid rgba(27, 27, 28, .3)
+}
+
+[data-contrast=dark] .style-transparent .dropdown-select,
+[data-contrast=dark] .style-transparent .form-field-text__input,
+[data-contrast] [data-contrast=dark] .style-transparent .dropdown-select,
+[data-contrast] [data-contrast=dark] .style-transparent .form-field-text__input {
+    background-color: rgba(27, 27, 28, .1)
+}
+
+[data-contrast=dark] .style-transparent .dropdown-select:focus,
+[data-contrast=dark] .style-transparent .form-field-text__input:focus,
+[data-contrast] [data-contrast=dark] .style-transparent .dropdown-select:focus,
+[data-contrast] [data-contrast=dark] .style-transparent .form-field-text__input:focus {
+    background-color: rgba(27, 27, 28, .15)
+}
+
+[data-contrast=light] .style-transparent .dropdown-select,
+[data-contrast=light] .style-transparent .form-field-text__input,
+[data-contrast] [data-contrast=light] .style-transparent .dropdown-select,
+[data-contrast] [data-contrast=light] .style-transparent .form-field-text__input {
+    background-color: hsla(0, 0%, 100%, .2)
+}
+
+[data-contrast=light] .style-transparent .dropdown-select:focus,
+[data-contrast=light] .style-transparent .form-field-text__input:focus,
+[data-contrast] [data-contrast=light] .style-transparent .dropdown-select:focus,
+[data-contrast] [data-contrast=light] .style-transparent .form-field-text__input:focus {
+    background-color: hsla(0, 0%, 100%, .3)
+}
+
+.component-form {
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: inherit
+}
+
+.component-form .form-element {
+    width: 100%
+}
+
+.component-form .policy-data-warning {
+    margin-top: 20px;
+    line-height: 16px;
+    min-height: 16px;
+    width: 100%;
+    text-align: left
+}
+
+.component-form .policy-data-warning .policy-link,
+.component-form .policy-data-warning .policy-message {
+    opacity: .5
+}
+
+.component-form .policy-data-warning .policy-link:hover {
+    opacity: 1
+}
+
+.component-form .policy-data-warning:empty {
+    display: none
+}
+
+.component-form .form-submit {
+    padding-top: 10px;
+    text-align: left
+}
+
+.component-form .form-submit .btn-text {
+    opacity: 1;
+    transition: opacity .3s ease
+}
+
+.component-form.submitting .component-button .btn-text,
+.component-form.submitting .component-button .component-icon {
+    opacity: 0
+}
+
+.component-form.submitting .submitting-status {
+    display: block;
+    opacity: 1;
+    visibility: visible
+}
+
+.component-form.submitting .submitting-status svg {
+    transform: scale(1)
+}
+
+.component-form.success .component-button .btn-text,
+.component-form.success .component-button .component-icon {
+    opacity: 0
+}
+
+.component-form.success .success-icon {
+    transition: opacity .45s, visibility .45s, transform .3s cubic-bezier(.25, 1, .1, 3);
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(-50%, -50%, 0) scale(1)
+}
+
+@media screen and (min-width:768px) and (min-height:571px),
+screen and (min-width:980px) {
+    .component-form {
+        max-width: 450px
+    }
+    .component-form.inline {
+        max-width: 950px
+    }
+    .component-form.inline.fields-count-1 {
+        max-width: 550px
+    }
+    .component-form.inline.fields-count-1 .form-submit {
+        max-width: 50%
+    }
+    .component-form.inline.fields-count-2 {
+        max-width: 750px
+    }
+    .component-form.inline.fields-count-2 .form-submit {
+        max-width: 33.33%
+    }
+    .component-form.inline.fields-count-3 {
+        max-width: 950px
+    }
+    .component-form.inline.fields-count-3 .form-submit {
+        max-width: 25%
+    }
+    .component-form.inline.fields-count-4 {
+        max-width: unset
+    }
+    .component-form.inline.fields-count-4 .form-submit {
+        max-width: 20%
+    }
+    .component-form.inline .form-fields {
+        display: inline-flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        width: 100%;
+        transition: padding .3s ease
+    }
+    .component-form.inline .form-fields.has-error {
+        padding-bottom: 22px
+    }
+    .component-form.inline .form-fields .error {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 0;
+        height: 20px;
+        line-height: 16px
+    }
+    .component-form.inline .form-fields .form-field[data-type=checkbox] {
+        padding-right: 20px
+    }
+    .component-form.inline .form-fields .form-field+.form-field[data-type=checkbox] {
+        padding-left: 10px
+    }
+    .component-form.inline .form-field {
+        flex-grow: 1;
+        flex-basis: 100%;
+        padding: 0 10px 0 0;
+        margin: 0;
+        display: flex;
+        align-items: flex-end
+    }
+    .component-form.inline .form-field[data-type=checkbox] {
+        flex-grow: 0;
+        flex-basis: auto
+    }
+    .component-form.inline .form-field-checkbox-item {
+        max-width: 100%;
+        height: 46px;
+        display: inline-flex;
+        align-items: center
+    }
+    .component-form.inline .form-field-checkbox-item__name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 270px
+    }
+    .component-form.inline .form-submit {
+        position: relative;
+        margin: 0;
+        display: flex;
+        align-items: flex-end
+    }
+    .component-form.inline .form-submit .btn-content {
+        width: 100%
+    }
+    .component-form.inline .btn-text {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        word-wrap: break-word;
+        text-overflow: ellipsis
+    }
+    .component-form.inline.style-underlined {
+        padding-top: 4px
+    }
+    .component-form.inline.style-underlined .form-field {
+        padding: 0 15px 0 0
+    }
+    .component-form.inline .policy-data-warning {
+        margin-top: 15px;
+        text-align: inherit
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .component-form {
+        max-width: 450px
+    }
+}
+
+.header-wrapper {
+    position: relative;
+    width: 100%;
+    will-change: transform
+}
+
+@media screen and (min-width:768px) and (min-height:571px),
+screen and (min-width:980px) {
+    .floating-header {
+        position: relative
+    }
+    .floating-header.fixed-header {
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 9;
+        padding: 10px 0!important
+    }
+    .floating-header.fixed-header .floating-header-background {
+        display: block;
+        opacity: 1;
+        visibility: visible
+    }
+    .floating-header.fixed-header .floating-hidden {
+        display: none
+    }
+    .floating-header.fade-out {
+        animation: show-menu 1 .15s cubic-bezier(.42, 0, .79, .33) reverse;
+        animation-fill-mode: forwards
+    }
+    .floating-header.fade-in {
+        animation: show-menu 1 .3s cubic-bezier(.21, .67, .58, 1);
+        animation-fill-mode: forwards
+    }
+    .floating-header.color--dark.fixed-header {
+        color: #fff
+    }
+    .floating-header.color--dark .floating-header-background {
+        background: #1b1b1c
+    }
+    .floating-header.color--light.fixed-header {
+        color: #1b1b1c
+    }
+    .floating-header.color--light .floating-header-background {
+        background: #fff
+    }
+    .floating-header-background {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1
+    }
+}
+
+.component-icon {
+    --iconSize: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    overflow: hidden;
+    color: var(--currentColor);
+    font-size: var(--iconSize);
+    width: 1em;
+    max-width: 100%;
+    flex-shrink: 0
+}
+
+.component-icon:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    content: "";
+    border-radius: inherit;
+    box-sizing: border-box;
+    z-index: 0
+}
+
+.component-icon .icon-wrap {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    z-index: 1
+}
+
+.component-icon .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%
+}
+
+.component-icon.style--bordered.border--medium:after {
+    border-width: 2px
+}
+
+.component-icon.style--bordered.border--large:after {
+    border-width: 3px
+}
+
+.component-icon.size--xsmall {
+    --iconSize: 26px
+}
+
+.component-icon.size--small {
+    --iconSize: 40px
+}
+
+.component-icon.size--medium {
+    --iconSize: 60px
+}
+
+.component-icon.size--large {
+    --iconSize: 80px
+}
+
+.component-icon.style--bordered:after,
+.component-icon.style--filled:after {
+    display: block
+}
+
+.component-icon.style--bordered .icon,
+.component-icon.style--filled .icon {
+    width: 56.667%;
+    height: 56.667%;
+    top: 21.6665%;
+    left: 21.6665%
+}
+
+.component-icon.style--bordered.size--xsmall,
+.component-icon.style--filled.size--xsmall {
+    --iconSize: 46px
+}
+
+.component-icon.style--bordered.size--small,
+.component-icon.style--filled.size--small {
+    --iconSize: 60px
+}
+
+.component-icon.style--bordered.size--medium,
+.component-icon.style--filled.size--medium {
+    --iconSize: 80px
+}
+
+.component-icon.style--bordered.size--large,
+.component-icon.style--filled.size--large {
+    --iconSize: 100px
+}
+
+.component-icon.style--filled:after {
+    background-color: currentColor
+}
+
+.component-icon.style--filled .icon-wrap {
+    color: var(--contrastColor)
+}
+
+.component-icon.style--bordered:after {
+    border: 1px solid currentColor;
+    background-color: transparent;
+    z-index: 1
+}
+
+.component-icon.shape--round {
+    border-radius: 50%
+}
+
+.component-icon.shape--rounded {
+    border-radius: .05em
+}
+
+.component-icon.scale--cover .icon {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover
+}
+
+.component-icon.color--dark {
+    --currentColor: #1b1b1c;
+    --contrastColor: #fff
+}
+
+.component-icon.color--light {
+    --currentColor: #fff;
+    --contrastColor: #1b1b1c
+}
+
+.component-image {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: block
+}
+
+.component-image.round {
+    border-radius: 50%;
+    overflow: hidden
+}
+
+.component-image.loading .component-image__layer {
+    opacity: 0;
+    visibility: hidden
+}
+
+.component-image.loading .component-image__loading {
+    opacity: 1;
+    visibility: visible
+}
+
+.component-image[data-img-type=background] {
+    padding-bottom: 100%
+}
+
+.component-image[data-img-type=image] {
+    padding-bottom: 0!important
+}
+
+.is-pointer .component-image[data-effect=zoom] .component-image__image {
+    transition: transform .5s ease;
+    will-change: transform
+}
+
+.is-pointer .component-image[data-effect=zoom]:hover .component-image__image {
+    transform: scale(1.06);
+    transition: transform 1.35s cubic-bezier(.21, .32, 0, .57)
+}
+
+.component-image[data-action=button],
+.component-image[data-action=link],
+.component-image[data-action=popup] {
+    cursor: pointer
+}
+
+.component-image .overlay-container {
+    position: absolute;
+    z-index: 2;
+    text-align: left;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity .35s ease .15s
+}
+
+.component-image .overlay-container[data-size=large] .overlay-title {
+    font-size: 30px
+}
+
+.component-image .overlay-container[data-size=large] .overlay-desc {
+    font-size: 16px
+}
+
+.component-image .overlay-container[data-size=small] .overlay-container {
+    padding: 15px
+}
+
+.component-image .overlay-container[data-size=small] .overlay-title {
+    font-size: 18px
+}
+
+.component-image .overlay-container[data-size=small] .overlay-title+.overlay-desc {
+    margin-top: 5px
+}
+
+.component-image .overlay-container[data-size=xsmall] .overlay-container {
+    padding: 7px
+}
+
+.component-image .overlay-container[data-size=xsmall] .overlay-title {
+    font-size: 15px
+}
+
+.component-image .overlay-container[data-size=xsmall] .overlay-desc {
+    font-size: 13px
+}
+
+.component-image .overlay-container[data-size=xsmall] .overlay-title+.overlay-desc {
+    margin-top: 5px
+}
+
+.component-image .overlay-content {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-flow: column;
+    padding: 30px
+}
+
+.component-image .overlay-content[data-position=top_left] {
+    justify-content: flex-start;
+    text-align: left
+}
+
+.component-image .overlay-content[data-position=center] {
+    justify-content: center;
+    align-items: center;
+    text-align: center
+}
+
+.component-image .overlay-content[data-position=bottom_left] {
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left
+}
+
+.component-image .overlay-content[data-position=bottom_right] {
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right
+}
+
+.component-image .overlay-layer {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none
+}
+
+.component-image .overlay-title {
+    font-size: 22px;
+    line-height: 1.37;
+    font-weight: 700;
+    z-index: 1;
+    transform: translateY(4px);
+    transition: transform .3s ease .15s
+}
+
+.component-image .overlay-desc {
+    display: block;
+    font-size: 14px;
+    line-height: 1.37;
+    z-index: 1;
+    transform: translateY(7px);
+    transition: transform .35s ease .15s
+}
+
+.component-image .overlay-title+.overlay-desc {
+    margin-top: 10px
+}
+
+.component-image.editor-focus .overlay-container,
+.component-image.editor-hover .overlay-container,
+.component-image .overlay-container.hover,
+.component-image .overlay-container[data-type=static] {
+    opacity: 1;
+    transition-delay: 0s
+}
+
+.component-image.editor-focus .overlay-container .overlay-desc,
+.component-image.editor-focus .overlay-container .overlay-title,
+.component-image.editor-hover .overlay-container .overlay-desc,
+.component-image.editor-hover .overlay-container .overlay-title,
+.component-image .overlay-container.hover .overlay-desc,
+.component-image .overlay-container.hover .overlay-title,
+.component-image .overlay-container[data-type=static] .overlay-desc,
+.component-image .overlay-container[data-type=static] .overlay-title {
+    transform: translateZ(0);
+    transition-delay: 0s
+}
+
+.component-image__natural {
+    display: none!important
+}
+
+.component-image__img {
+    position: relative;
+    -o-object-fit: contain;
+    object-fit: contain;
+    opacity: 1;
+    visibility: visible;
+    z-index: 0
+}
+
+.component-image__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: transform .15s cubic-bezier(.21, .67, .58, 1), opacity .55s ease, visibility .55s ease
+}
+
+.component-image__bg {
+    image-rendering: optimizeSpeed;
+    image-rendering: auto;
+    image-rendering: -o-crisp-edges;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    background-repeat: no-repeat;
+    background-position: var(--imagePositionX, 50%) var(--imagePositionY, 50%);
+    background-size: cover;
+    opacity: 1;
+    visibility: visible;
+    z-index: 0
+}
+
+.component-image__bg--contain {
+    background-size: contain
+}
+
+.component-image__bg--repeat {
+    background-size: auto;
+    background-repeat: repeat
+}
+
+.component-image__loading {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1
+}
+
+.component-slider .component-image__bg--contain {
+    --imagePositionX: 50%!important;
+    --imagePositionY: 50%!important
+}
+
+.component-logo {
+    position: relative;
+    width: 3em;
+    max-width: 100%
+}
+
+.component-logo a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.component-logo-img {
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%
+}
+
+.component-map {
+    overflow: hidden;
+    width: 100%
+}
+
+.component-map .map-wrap {
+    color: #000
+}
+
+.component-map[data-format=overlay],
+.component-map[data-format=overlay] .map-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.component-map[data-format=overlay] .map-wrap {
+    padding-bottom: 0!important
+}
+
+.component-map[data-format=element] {
+    position: relative
+}
+
+.component-map[data-format=element] .map-wrap {
+    padding-bottom: 60%
+}
+
+.component-map .map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .07)
+}
+
+.component-map .gm-style-cc {
+    display: none
+}
+
+.component-map ymaps .placemark {
+    position: relative;
+    top: -46px;
+    margin-left: -16px;
+    max-width: none;
+    max-height: none
+}
+
+.component-media {
+    width: 100%;
+    position: relative;
+    justify-content: inherit
+}
+
+.component-media[data-type=image] {
+    overflow: hidden
+}
+
+.component-media .component-image,
+.component-media .component-video {
+    z-index: 0
+}
+
+.component-menu {
+    display: flex;
+    justify-content: inherit;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    padding: 4px 5px;
+    margin: -4px -5px
+}
+
+.component-menu .component-menu-list {
+    margin: 0 -12px
+}
+
+.component-menu.style--underline span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity .3s ease;
+    opacity: 0
+}
+
+.component-menu.style--underline.size--large:not(.weight--light) span:after,
+.component-menu.style--underline.weight--bold span:after {
+    height: 2px
+}
+
+.is-pointer .component-menu.style--underline a:hover span:after {
+    opacity: .35
+}
+
+.is-pointer .component-menu.style--underline li.open a span:after {
+    opacity: 0
+}
+
+.is-pointer .component-menu.style--reverse_opacity .menu-item {
+    opacity: 1;
+    transition: opacity .3s ease
+}
+
+.is-pointer .component-menu.style--reverse_opacity .menu-item.open,
+.is-pointer .component-menu.style--reverse_opacity .menu-item:hover {
+    opacity: 1!important;
+    transition-delay: 0s
+}
+
+.is-pointer .component-menu.style--reverse_opacity.in-hover .menu-item,
+.is-pointer .component-menu.style--reverse_opacity.in-open .menu-item {
+    opacity: .5;
+    transition-delay: .1s
+}
+
+.component-menu.style--progress span:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    opacity: .35;
+    transform: translateX(-2px);
+    z-index: 2;
+    pointer-events: none;
+    transition: all .3s cubic-bezier(.21, .67, .58, 1)
+}
+
+.component-menu.style--progress.size--large:not(.weight--light) span:after,
+.component-menu.style--progress.weight--bold span:after {
+    height: 2px
+}
+
+.is-pointer .component-menu.style--progress a:hover span:after {
+    transform: translateZ(0);
+    width: 100%;
+    transition-delay: .1s
+}
+
+.is-pointer .component-menu.style--progress li.open a span:after {
+    width: 0
+}
+
+.component-menu.style--color li {
+    transition: all .3s cubic-bezier(.21, .67, .58, 1)
+}
+
+@media screen and (min-width:768px) and (min-height:571px),
+screen and (min-width:980px) {
+    .component-menu.size--small .component-menu-list {
+        font-size: 14px;
+        line-height: 1.37
+    }
+    .component-menu.size--large .component-menu-list {
+        font-size: 18px;
+        line-height: 1.37
+    }
+}
+
+@media screen and (min-width:768px) and (min-height:571px),
+screen and (min-width:980px) {
+    .component-menu.weight--light .component-menu-list {
+        font-weight: 300
+    }
+    .component-menu.weight--normal .component-menu-list {
+        font-weight: 400
+    }
+    .component-menu.weight--medium .component-menu-list {
+        font-weight: 500
+    }
+    .component-menu.weight--bold .component-menu-list {
+        font-weight: 700
+    }
+}
+
+.component-menu-list {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: inherit;
+    list-style: none
+}
+
+.component-menu-list.nowrap-list {
+    flex-wrap: nowrap;
+    margin-top: -5px;
+    margin-bottom: -5px
+}
+
+.component-menu-list a {
+    display: inline-flex;
+    align-items: center;
+    opacity: 1;
+    padding: 5px 12px;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative
+}
+
+.component-menu-list a .folder-arrow {
+    width: 10px;
+    height: 10px;
+    transform: rotate(0deg);
+    transition: transform .35s ease;
+    display: inline-block;
+    margin-left: 10px;
+    flex-shrink: 0
+}
+
+.is-pointer .component-menu-list a:hover {
+    opacity: 1
+}
+
+.component-menu-list .menu-item {
+    display: block;
+    flex-shrink: 0;
+    justify-content: inherit;
+    white-space: nowrap
+}
+
+.component-menu-list .folder-item.open>.folder-item-text .folder-arrow {
+    transform: rotate(-180deg)
+}
+
+.component-menu-list .show-more {
+    display: flex;
+    align-items: center;
+    padding: 5px 12px;
+    position: relative;
+    cursor: pointer;
+    transition: all .18s
+}
+
+.component-menu-list .show-more.open,
+.is-pointer .component-menu-list .show-more:hover {
+    opacity: .8
+}
+
+.component-menu-list .show-more svg {
+    margin: auto
+}
+
+.component-menu-list span {
+    color: inherit;
+    position: relative
+}
+
+[data-direction=column] .component-menu-list {
+    flex-direction: column
+}
+
+.component-menu-dropdown {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    animation: slideUp .18s ease-out 1;
+    z-index: 9
+}
+
+.component-menu-dropdown.size--small {
+    font-size: 14px
+}
+
+.component-menu-dropdown.size--medium {
+    font-size: 15px
+}
+
+.component-menu-dropdown.size--large {
+    font-size: 16px
+}
+
+.component-menu-dropdown.weight--light .component-menu-dropdown-list {
+    font-weight: 300
+}
+
+.component-menu-dropdown.weight--normal .component-menu-dropdown-list {
+    font-weight: 400
+}
+
+.component-menu-dropdown.weight--medium .component-menu-dropdown-list {
+    font-weight: 500
+}
+
+.component-menu-dropdown.weight--bold .component-menu-dropdown-list {
+    font-weight: 700
+}
+
+.component-menu-dropdown .component-menu-dropdown-list {
+    display: block
+}
+
+.component-menu-dropdown .component-menu-dropdown-list .component-menu-dropdown-list {
+    top: 0;
+    left: 100%;
+    visibility: hidden;
+    transform: scaleY(0);
+    opacity: 0;
+    pointer-events: none;
+    margin-top: -5px
+}
+
+.component-menu-dropdown .component-menu-dropdown-list .component-menu-dropdown-list.show-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+    z-index: 5;
+    pointer-events: all;
+    transition: opacity .3s cubic-bezier(.21, .67, .58, 1), visibility .3s cubic-bezier(.21, .67, .58, 1);
+    transition-delay: 0s;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto
+}
+
+.component-menu-dropdown .component-menu-dropdown-list .component-menu-dropdown-list.show-dropdown.in-right {
+    margin-left: -5px
+}
+
+.component-menu-dropdown .component-menu-dropdown-list .component-menu-dropdown-list.show-dropdown.in-left {
+    margin-right: -5px;
+    left: auto;
+    right: 100%
+}
+
+.component-menu-dropdown .component-menu-dropdown-list .component-menu-dropdown-list.show-dropdown.in-bottom {
+    left: 0;
+    top: 100%;
+    margin: 5px 0 0
+}
+
+.component-menu-dropdown-list {
+    display: none;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .08);
+    padding: 5px 0;
+    border-radius: 3px;
+    max-width: 320px;
+    min-width: 150px;
+    max-height: inherit;
+    justify-content: inherit
+}
+
+.component-menu-dropdown-list .menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    transition: all .2s;
+    padding: 0 20px;
+    cursor: pointer
+}
+
+.is-pointer .component-menu-dropdown-list .menu-item:hover {
+    background: rgba(48, 52, 59, .08)
+}
+
+.is-pointer .component-menu-dropdown-list .menu-item:hover>a {
+    opacity: 1
+}
+
+.component-menu-dropdown-list a {
+    text-decoration: none;
+    width: 100%;
+    padding: 8px 0;
+    line-height: 22px;
+    opacity: .75;
+    display: flex
+}
+
+.component-menu-dropdown-list a span {
+    width: 100%
+}
+
+.component-menu-dropdown-list .folder-item-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.component-menu-dropdown-list .folder-item-text .folder-arrow {
+    width: 10px;
+    height: 10px;
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    margin-left: 0;
+    flex-shrink: 0
+}
+
+.component-menu-dropdown-list .folder-item-text span {
+    padding-right: 20px
+}
+
+.component-quiz {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 20px;
+    margin: 0 -20px
+}
+
+.component-quiz.quiz-started .step {
+    transition: all .15s cubic-bezier(.42, 0, .79, .33)
+}
+
+.component-quiz.quiz-started .step.active {
+    transition: all .4s cubic-bezier(.21, .67, .58, 1) .15s
+}
+
+.component-quiz.quiz-started .form-field-image-content,
+.component-quiz.quiz-started .quiz-prev {
+    transition: all .35s ease
+}
+
+.component-quiz.quiz-started .form-field-image-check {
+    transition: opacity .35s ease
+}
+
+.component-quiz.quiz-started .form-field-image-check-icon {
+    transition: all .35s ease
+}
+
+.component-quiz.step-change-animation,
+.component-quiz.step-change-animation .step {
+    display: flex
+}
+
+.component-quiz .quiz-steps {
+    padding: 50px 0;
+    min-height: 0;
+    margin: auto 0;
+    flex-grow: 1
+}
+
+.component-quiz .quiz-steps,
+.component-quiz .steps-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: inherit;
+    width: 100%
+}
+
+.component-quiz .steps-wrapper {
+    height: 100%;
+    flex-shrink: 0;
+    flex-flow: row nowrap
+}
+
+.component-quiz .step {
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    display: none;
+    flex-flow: column;
+    align-items: center;
+    justify-content: inherit;
+    flex-shrink: 1;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+.component-quiz .step.higher {
+    align-self: flex-start
+}
+
+.component-quiz .step.active {
+    display: flex;
+    visibility: visible;
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
+    will-change: transform;
+    z-index: 1;
+    overflow: visible
+}
+
+.component-quiz .step.next,
+.component-quiz .step.prev {
+    will-change: transform
+}
+
+.component-quiz .step.next {
+    transform: translateX(7px)
+}
+
+.component-quiz .step.prev {
+    transform: translateX(-15px)
+}
+
+.component-quiz .quiz-fields {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    justify-content: inherit
+}
+
+.component-quiz .quiz-fields .error {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 5px 0 0;
+    height: auto;
+    position: absolute;
+    top: 100%
+}
+
+.component-quiz .quiz-fields .field {
+    width: 50%;
+    max-width: 550px;
+    justify-content: inherit
+}
+
+.component-quiz .quiz-fields .field:not([data-type=hidden])~.field {
+    margin-top: 40px
+}
+
+.component-quiz .quiz-fields .field[data-type=hidden] {
+    display: none!important
+}
+
+.component-quiz .quiz-fields .field[data-type=image] {
+    width: 100%;
+    max-width: unset
+}
+
+.component-quiz .quiz-fields .field[data-type=checkbox],
+.component-quiz .quiz-fields .field[data-type=radio] {
+    width: auto
+}
+
+.component-quiz .quiz-fields:not([data-visible-count="1"]) .field[data-type=checkbox],
+.component-quiz .quiz-fields:not([data-visible-count="1"]) .field[data-type=radio] {
+    min-width: 550px
+}
+
+.component-quiz .quiz-fields .form-field-desc {
+    padding-bottom: 10px;
+    opacity: .5
+}
+
+.component-quiz .quiz-fields .form-field-desc+.form-field-title {
+    padding-bottom: 5px!important
+}
+
+.component-quiz .quiz-fields .form-field {
+    text-align: inherit;
+    justify-content: inherit
+}
+
+.component-quiz .quiz-fields .form-field[data-type=checkbox]+[data-type=checkbox] {
+    margin-top: -10px
+}
+
+.component-quiz .quiz-submit {
+    padding-top: 0
+}
+
+.component-quiz .step-title {
+    display: block;
+    width: 50%;
+    max-width: 550px;
+    font-weight: 600;
+    letter-spacing: .35px;
+    margin-bottom: 50px;
+    text-align: inherit
+}
+
+.component-quiz .quiz-actions {
+    display: flex;
+    align-items: center;
+    justify-content: inherit;
+    max-width: 100%;
+    width: 100%
+}
+
+.component-quiz .quiz-actions .quiz-prev {
+    width: 46px;
+    margin-left: -66px;
+    margin-right: 20px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+.component-quiz .quiz-actions .quiz-submit {
+    display: none
+}
+
+.component-quiz .quiz-actions .suggestion-next {
+    font-size: 14px;
+    color: currentColor;
+    padding-left: 20px;
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    will-change: opacity;
+    opacity: .5
+}
+
+.component-quiz .quiz-actions.show-prev .quiz-prev {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all
+}
+
+.component-quiz .policy-data-warning {
+    font-size: 14px;
+    margin-top: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    will-change: opacity;
+    width: 50%;
+    max-width: 550px
+}
+
+.component-quiz .policy-data-warning .policy-link,
+.component-quiz .policy-data-warning .policy-message {
+    opacity: .5
+}
+
+.component-quiz .policy-data-warning .policy-link:hover {
+    opacity: 1
+}
+
+.component-quiz .form-field-image-group {
+    position: relative;
+    display: flex;
+    justify-content: inherit;
+    flex-flow: row wrap;
+    margin: -25px
+}
+
+.component-quiz .form-field-image-group[data-divisible="5"] {
+    margin: -12px
+}
+
+.component-quiz .form-field-image-group[data-divisible="5"] .form-field-image-item {
+    width: 20%;
+    font-size: 13px;
+    padding: 12px
+}
+
+.component-quiz .form-field-image-group.center {
+    justify-content: center
+}
+
+.component-quiz .form-field-image-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+    overflow: hidden
+}
+
+.component-quiz .form-field-image-item {
+    display: block;
+    width: 25%;
+    padding: 25px;
+    flex-shrink: 0;
+    font-size: 16px;
+    line-height: 1.625;
+    letter-spacing: .3px;
+    cursor: pointer
+}
+
+.component-quiz .form-field-image-item input {
+    display: none
+}
+
+.component-quiz .form-field-image-item input:checked~.form-field-image-content .form-field-image-check {
+    opacity: 1
+}
+
+.component-quiz .form-field-image-item input:checked~.form-field-image-content .form-field-image-check .form-field-image-check-icon {
+    opacity: 1;
+    transform: translateZ(0)
+}
+
+.is-pointer .component-quiz .form-field-image-item:hover .form-field-image-check {
+    opacity: 1
+}
+
+.component-quiz .form-field-image-item .form-field-image-check {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    opacity: 0;
+    background-color: rgba(27, 27, 28, .5);
+    transform: translateZ(0)
+}
+
+.component-quiz .form-field-image-item .form-field-image-check-icon {
+    opacity: 0;
+    transform: scale(.85);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto
+}
+
+.component-quiz .form-field-image-item .form-field-image-text {
+    color: currentColor;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 22px;
+    width: 100%;
+    display: block;
+    text-align: inherit
+}
+
+.component-quiz .form-field-image-item .form-field-image-wrap {
+    position: relative;
+    width: 100%
+}
+
+.component-quiz .form-field-image-item .form-field-image-wrap.orient-horizontal .form-field-image-img {
+    padding-bottom: 62%
+}
+
+.component-quiz .form-field-image-item .form-field-image-wrap.orient-vertical .form-field-image-img {
+    padding-bottom: 136%
+}
+
+.component-quiz .form-field-image-item .form-field-image-img {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateZ(0)
+}
+
+.component-quiz .form-field-image-item .form-field-image-img.empty {
+    background-size: 50px
+}
+
+.component-quiz.submitting .quiz-next,
+.component-quiz.submitting .quiz-prev,
+.component-quiz.submitting .quiz-submit {
+    pointer-events: none
+}
+
+.component-quiz.submitting .quiz-next .btn-text {
+    opacity: 0
+}
+
+.component-quiz.submitting .submitting-status {
+    display: block;
+    opacity: 1;
+    visibility: visible
+}
+
+.component-quiz.submitting .submitting-status svg {
+    transform: scale(1)
+}
+
+.component-quiz.success .quiz-next .btn-text,
+.component-quiz.success .submitting-status {
+    opacity: 0
+}
+
+.component-quiz.success .success-icon {
+    transition: opacity .45s, visibility .45s, transform .3s cubic-bezier(.25, 1, .1, 3);
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(-50%, -50%, 0) scale(1)
+}
+
+.component-quiz.justify--start {
+    text-align: left
+}
+
+.component-quiz.justify--start .quiz-actions,
+.component-quiz.justify--start .quiz-progress,
+.component-quiz.justify--start .quiz-steps {
+    justify-content: start
+}
+
+.component-quiz.justify--start .policy-data-warning,
+.component-quiz.justify--start .step-title {
+    align-self: flex-start
+}
+
+.component-quiz.justify--center .quiz-actions,
+.component-quiz.justify--center .quiz-progress,
+.component-quiz.justify--center .quiz-steps {
+    justify-content: center
+}
+
+.component-quiz.justify--center .quiz-fields {
+    align-items: center
+}
+
+.component-quiz.justify--center .suggestion-next {
+    width: 200px;
+    margin-right: -150px
+}
+
+[data-quiz-part=progress] {
+    display: flex;
+    width: 100%;
+    justify-content: inherit
+}
+
+[data-quiz-part=progress][data-progress-style=circle] {
+    position: relative;
+    min-height: 92px;
+    display: flex;
+    justify-content: inherit;
+    align-items: center
+}
+
+[data-quiz-part=progress][data-progress-style=circle] .quiz-progress-inner {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 60px;
+    height: 60px
+}
+
+[data-quiz-part=progress][data-progress-style=circle] .progress-text {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px
+}
+
+[data-quiz-part=progress][data-progress-style=circle] .progress-loader-circle {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0
+}
+
+[data-quiz-part=progress][data-progress-style=circle] .progress-percent {
+    font-size: 14px;
+    line-height: 20px;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    padding-left: 4px;
+    left: 0;
+    width: 100%
+}
+
+[data-quiz-part=progress] .progress-percent,
+[data-quiz-part=progress] .progress-text {
+    text-align: center;
+    font-size: 1.143rem;
+    line-height: 1.375;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+[data-quiz-part=progress] .progress-text .current,
+[data-quiz-part=progress] .progress-text .total {
+    margin: 0 5px
+}
+
+[data-quiz-part=progress] .progress-loader-bar {
+    position: relative;
+    width: 240px;
+    height: 3px;
+    margin-top: 37px
+}
+
+[data-quiz-part=progress] .progress-loader-bar .progress-loader-bg {
+    width: 100%;
+    height: 3px;
+    background-color: currentColor;
+    border-radius: 2px;
+    top: 0;
+    left: 0;
+    line-height: 24px;
+    opacity: .3
+}
+
+[data-quiz-part=progress] .progress-loader-bar .current {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+    display: block;
+    border-radius: 3px;
+    background: currentColor;
+    height: 100%;
+    width: 0;
+    transition: width .35s ease
+}
+
+[data-quiz-part=progress] .progress-loader-bar .current .progress-runner[data-value] {
+    position: absolute;
+    overflow: hidden;
+    right: -20px;
+    bottom: 12px;
+    min-width: 40px;
+    text-align: center;
+    transition: all .3s ease;
+    padding-bottom: 4px
+}
+
+[data-quiz-part=progress] .progress-loader-bar .current .progress-runner[data-value]:before {
+    content: attr(data-value);
+    line-height: 24px;
+    display: block;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: currentColor;
+    border-radius: 3px;
+    padding: 0 3px
+}
+
+[data-quiz-part=progress] .progress-loader-bar .current .progress-runner[data-value]:after {
+    content: "";
+    transform: translate(-50%);
+    position: absolute;
+    left: 50%;
+    right: auto;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid currentColor;
+    transition: left .3s ease
+}
+
+[data-quiz-part=progress] .progress-loader-circle {
+    display: inline-block;
+    stroke: currentColor;
+    fill: none
+}
+
+[data-quiz-part=progress] .progress-loader-circle .progress-loader-bg {
+    opacity: .3
+}
+
+[data-quiz-part=progress] .progress-loader-circle .current {
+    transition: all .35s ease
+}
+
+[data-quiz-part=progress] .progress-percent~.progress-loader-bar,
+[data-quiz-part=progress] .progress-text~.progress-loader-bar {
+    margin-top: 20px
+}
+
+[data-contrast=dark] .style-filled .form-field-select .dropdown-select,
+[data-contrast] [data-contrast=dark] .style-filled .form-field-select .dropdown-select {
+    padding: .75rem calc(15px - 1px) .6875rem
+}
+
+.component-quiz.color--dark .component-button,
+[data-contrast=dark] .component-quiz.color--contrast .component-button,
+[data-contrast] [data-contrast=dark] .component-quiz.color--contrast .component-button {
+    color: #1b1b1c
+}
+
+.component-quiz.color--dark .component-button .btn-content,
+[data-contrast=dark] .component-quiz.color--contrast .component-button .btn-content,
+[data-contrast] [data-contrast=dark] .component-quiz.color--contrast .component-button .btn-content {
+    --contrastColor: #fff;
+    --currentColor: #1b1b1c
+}
+
+.component-quiz.color--dark .component-button .btn-text,
+[data-contrast=dark] .component-quiz.color--contrast .component-button .btn-text,
+[data-contrast] [data-contrast=dark] .component-quiz.color--contrast .component-button .btn-text {
+    color: var(--currentColor)!important
+}
+
+.is-pointer .component-quiz.color--dark .component-button.effect--opacity.filled:hover,
+.is-pointer [data-contrast=dark] .component-quiz.color--contrast .component-button.effect--opacity.filled:hover,
+.is-pointer [data-contrast] [data-contrast=dark] .component-quiz.color--contrast .component-button.effect--opacity.filled:hover {
+    color: #434344
+}
+
+.component-quiz.color--dark .component-button.filled .btn-content,
+.is-pointer .component-quiz.color--dark .component-button.effect--fill:hover .btn-content,
+.is-pointer .component-quiz.color--dark .component-button.effect--opacity.bordered:hover .btn-content,
+.is-pointer [data-contrast=dark] .component-quiz.color--contrast .component-button.effect--fill:hover .btn-content,
+.is-pointer [data-contrast=dark] .component-quiz.color--contrast .component-button.effect--opacity.bordered:hover .btn-content,
+.is-pointer [data-contrast] [data-contrast=dark] .component-quiz.color--contrast .component-button.effect--fill:hover .btn-content,
+.is-pointer [data-contrast] [data-contrast=dark] .component-quiz.color--contrast .component-button.effect--opacity.bordered:hover .btn-content,
+[data-contrast=dark] .component-quiz.color--contrast .component-button.filled .btn-content,
+[data-contrast] [data-contrast=dark] .component-quiz.color--contrast .component-button.filled .btn-content {
+    --currentColor: #fff;
+    --contrastColor: #1b1b1c
+}
+
+.component-quiz.color--dark .component-button.bordered .btn-content,
+[data-contrast=dark] .component-quiz.color--contrast .component-button.bordered .btn-content,
+[data-contrast] [data-contrast=dark] .component-quiz.color--contrast .component-button.bordered .btn-content {
+    --currentColor: #1b1b1c
+}
+
+.component-quiz.color--dark .quiz-progress,
+[data-contrast=dark] .component-quiz.color--contrast .quiz-progress,
+[data-contrast] [data-contrast=dark] .component-quiz.color--contrast .quiz-progress {
+    color: #1b1b1c
+}
+
+.component-quiz.color--dark .quiz-progress .progress-loader-bar .progress-runner:before,
+[data-contrast=dark] .component-quiz.color--contrast .quiz-progress .progress-loader-bar .progress-runner:before,
+[data-contrast] [data-contrast=dark] .component-quiz.color--contrast .quiz-progress .progress-loader-bar .progress-runner:before {
+    color: #fff;
+    background-color: #1b1b1c
+}
+
+.component-quiz.color--dark .form-field-image-check #bg,
+[data-contrast=dark] .component-quiz.color--contrast .form-field-image-check #bg,
+[data-contrast] [data-contrast=dark] .component-quiz.color--contrast .form-field-image-check #bg {
+    fill: #1b1b1c
+}
+
+.component-quiz.color--dark .form-field-image-check #arrow,
+[data-contrast=dark] .component-quiz.color--contrast .form-field-image-check #arrow,
+[data-contrast] [data-contrast=dark] .component-quiz.color--contrast .form-field-image-check #arrow {
+    fill: #fff
+}
+
+.component-quiz.color--light .component-button,
+[data-contrast=light] .component-quiz.color--contrast .component-button,
+[data-contrast] [data-contrast=light] .component-quiz.color--contrast .component-button {
+    color: #fff
+}
+
+.component-quiz.color--light .component-button .btn-content,
+[data-contrast=light] .component-quiz.color--contrast .component-button .btn-content,
+[data-contrast] [data-contrast=light] .component-quiz.color--contrast .component-button .btn-content {
+    --contrastColor: #1b1b1c;
+    --currentColor: #fff
+}
+
+.component-quiz.color--light .component-button .btn-text,
+[data-contrast=light] .component-quiz.color--contrast .component-button .btn-text,
+[data-contrast] [data-contrast=light] .component-quiz.color--contrast .component-button .btn-text {
+    color: var(--currentColor)!important
+}
+
+.is-pointer .component-quiz.color--light .component-button.effect--opacity.filled:hover,
+.is-pointer [data-contrast=light] .component-quiz.color--contrast .component-button.effect--opacity.filled:hover,
+.is-pointer [data-contrast] [data-contrast=light] .component-quiz.color--contrast .component-button.effect--opacity.filled:hover {
+    color: #eee
+}
+
+.component-quiz.color--light .component-button.filled .btn-content,
+.is-pointer .component-quiz.color--light .component-button.effect--fill:hover .btn-content,
+.is-pointer .component-quiz.color--light .component-button.effect--opacity.bordered:hover .btn-content,
+.is-pointer [data-contrast=light] .component-quiz.color--contrast .component-button.effect--fill:hover .btn-content,
+.is-pointer [data-contrast=light] .component-quiz.color--contrast .component-button.effect--opacity.bordered:hover .btn-content,
+.is-pointer [data-contrast] [data-contrast=light] .component-quiz.color--contrast .component-button.effect--fill:hover .btn-content,
+.is-pointer [data-contrast] [data-contrast=light] .component-quiz.color--contrast .component-button.effect--opacity.bordered:hover .btn-content,
+[data-contrast=light] .component-quiz.color--contrast .component-button.filled .btn-content,
+[data-contrast] [data-contrast=light] .component-quiz.color--contrast .component-button.filled .btn-content {
+    --currentColor: #1b1b1c;
+    --contrastColor: #fff
+}
+
+.component-quiz.color--light .component-button.bordered .btn-content,
+[data-contrast=light] .component-quiz.color--contrast .component-button.bordered .btn-content,
+[data-contrast] [data-contrast=light] .component-quiz.color--contrast .component-button.bordered .btn-content {
+    --currentColor: #fff
+}
+
+.component-quiz.color--light .quiz-progress,
+[data-contrast=light] .component-quiz.color--contrast .quiz-progress,
+[data-contrast] [data-contrast=light] .component-quiz.color--contrast .quiz-progress {
+    color: #fff
+}
+
+.component-quiz.color--light .quiz-progress .progress-loader-bar .progress-runner:before,
+[data-contrast=light] .component-quiz.color--contrast .quiz-progress .progress-loader-bar .progress-runner:before,
+[data-contrast] [data-contrast=light] .component-quiz.color--contrast .quiz-progress .progress-loader-bar .progress-runner:before {
+    color: #000;
+    background-color: #fff
+}
+
+.component-quiz.color--light .form-field-image-check #bg,
+[data-contrast=light] .component-quiz.color--contrast .form-field-image-check #bg,
+[data-contrast] [data-contrast=light] .component-quiz.color--contrast .form-field-image-check #bg {
+    fill: #fff
+}
+
+.component-quiz.color--light .form-field-image-check #arrow,
+[data-contrast=light] .component-quiz.color--contrast .form-field-image-check #arrow,
+[data-contrast] [data-contrast=light] .component-quiz.color--contrast .form-field-image-check #arrow {
+    fill: #000
+}
+
+.slider-button-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    transition: opacity .3s, visibility .3s, transform .3s cubic-bezier(.21, .67, .58, 1)
+}
+
+.slider-button-bg {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    border: 2px solid currentColor;
+    opacity: 1;
+    transition: transform .3s cubic-bezier(.21, .67, .58, 1), opacity .18s linear
+}
+
+.slider-button-icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    pointer-events: none
+}
+
+.slider-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    z-index: 4;
+    height: 100%;
+    padding: 0 .4em;
+    cursor: pointer;
+    transition: opacity .3s cubic-bezier(.42, 0, .79, .33), visibility .3s cubic-bezier(.42, 0, .79, .33)
+}
+
+.slider-button.swiper-button-disabled {
+    cursor: default!important;
+    opacity: .4
+}
+
+.slider-button.swiper-button-disabled .slider-button-holder {
+    pointer-events: none!important
+}
+
+.is-pointer .slider-button:not(.swiper-button-disabled):hover .slider-button-bg {
+    transform: translateZ(0);
+    will-change: transform;
+    transform: scale(1.08)
+}
+
+body.is-view .slider-button.disabled {
+    display: none
+}
+
+.slider-button[data-direction=prev] {
+    left: 0
+}
+
+.slider-button[data-direction=next] {
+    right: 0
+}
+
+.slider-button[data-direction=next] .slider-button-icon {
+    transform: rotate(180deg)
+}
+
+.slider-button.color--dark {
+    color: #1b1b1c
+}
+
+.slider-button.color--light {
+    color: #fff
+}
+
+.slider-button.size--small {
+    font-size: 40px;
+    padding: 0 .25em
+}
+
+.slider-button.shape--square .slider-button-bg {
+    border-radius: 0
+}
+
+.slider-button.shape--rounded .slider-button-bg {
+    border-radius: 4px
+}
+
+.slider-button.shape--round .slider-button-bg {
+    border-radius: 50%
+}
+
+.slider-button.style--filled .slider-button-bg {
+    border-color: transparent
+}
+
+.slider-button.style--filled.color--dark {
+    color: #fff
+}
+
+.slider-button.style--filled.color--dark .slider-button-bg {
+    background: #1b1b1c
+}
+
+.slider-button.style--filled.color--light {
+    color: #1b1b1c
+}
+
+.slider-button.style--filled.color--light .slider-button-bg {
+    background: #fff
+}
+
+.slider-button.style--filled.color--custom .slider-button-bg {
+    background: currentColor
+}
+
+.slider-button.style--filled_opacify .slider-button-bg {
+    background-color: currentColor;
+    opacity: .4;
+    border-color: transparent
+}
+
+.is-pointer .slider-button.style--filled_opacify:not(.swiper-button-disabled):hover .slider-button-bg {
+    opacity: .6!important;
+    transform: translateZ(0)
+}
+
+.is-pointer .slider-button.style--filled_opacify:not(.swiper-button-disabled):active .slider-button-bg {
+    transform: scale(1.08)
+}
+
+.slider-button.style--bordered .slider-button-bg {
+    background: transparent!important
+}
+
+.slider-button.style--bordered .slider-button-icon {
+    color: inherit
+}
+
+.is-pointer .slider-button.style--flat:not(.swiper-button-disabled):hover .slider-button-bg {
+    transform: none
+}
+
+.is-pointer .slider-button.style--flat:not(.swiper-button-disabled):hover.direction-prev .slider-button-holder {
+    transform: translateX(-3px)
+}
+
+.is-pointer .slider-button.style--flat:not(.swiper-button-disabled):hover.direction-next .slider-button-holder {
+    transform: translateX(3px)
+}
+
+.slider-button.style--flat .slider-button-holder {
+    width: 30px;
+    height: 30px
+}
+
+.slider-button.style--flat .slider-button-bg {
+    background: transparent!important;
+    border-color: transparent!important
+}
+
+.slider-button.style--flat .slider-button-icon {
+    color: inherit;
+    width: 100%;
+    height: 100%
+}
+
+.component-slider[data-current-content=video] .slider-button .slider-button-holder {
+    pointer-events: all
+}
+
+.content-zone[data-contrast=dark] .slider-button.style--filled.color--contrast,
+[data-contrast=dark] .slider-button.style--filled.color--contrast {
+    color: #fff
+}
+
+.content-zone[data-contrast=dark] .slider-button.style--filled.color--contrast .slider-button-bg,
+[data-contrast=dark] .slider-button.style--filled.color--contrast .slider-button-bg {
+    background: #1b1b1c
+}
+
+.content-zone[data-contrast=dark] .slider-button.style--filled_opacify.color--contrast,
+[data-contrast=dark] .slider-button.style--filled_opacify.color--contrast {
+    color: #fff
+}
+
+.content-zone[data-contrast=dark] .slider-button.style--filled_opacify.color--contrast .slider-button-bg,
+[data-contrast=dark] .slider-button.style--filled_opacify.color--contrast .slider-button-bg {
+    opacity: .25;
+    background: #1b1b1c
+}
+
+.content-zone[data-contrast=light] .slider-button.style--filled.color--contrast,
+[data-contrast=light] .slider-button.style--filled.color--contrast {
+    color: #1b1b1c
+}
+
+.content-zone[data-contrast=light] .slider-button.style--filled.color--contrast .slider-button-bg,
+[data-contrast=light] .slider-button.style--filled.color--contrast .slider-button-bg {
+    background: #fff
+}
+
+.content-zone[data-contrast=light] .slider-button.style--filled_opacify.color--contrast,
+[data-contrast=light] .slider-button.style--filled_opacify.color--contrast {
+    color: #1b1b1c
+}
+
+.content-zone[data-contrast=light] .slider-button.style--filled_opacify.color--contrast .slider-button-bg,
+[data-contrast=light] .slider-button.style--filled_opacify.color--contrast .slider-button-bg {
+    background: #fff;
+    opacity: .25
+}
+
+.component-slider {
+    width: 100%;
+    position: relative;
+    justify-content: inherit
+}
+
+.component-slider[data-img-type=image] {
+    position: relative
+}
+
+.component-slider[data-img-type=image] .component-slider__item {
+    height: auto
+}
+
+.component-slider[data-img-type=image] .component-image {
+    padding-bottom: 0
+}
+
+.component-slider[data-img-type=image] .component-video {
+    padding-bottom: 56%
+}
+
+.component-slider[data-img-type=image] .component-video .video-wrapper {
+    position: absolute
+}
+
+.component-slider .slider-pagination {
+    width: 100%
+}
+
+.component-slider .fraction-pagination {
+    font-weight: 700;
+    font-size: 13px;
+    bottom: 10px
+}
+
+.component-slider[data-current-content=video] .slider-pagination {
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(5px)
+}
+
+.component-slider[data-current-content=video] .slider-button {
+    pointer-events: none
+}
+
+.component-slider[data-current-content=video] .slider-button span {
+    pointer-events: all
+}
+
+.component-slider__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.component-slider__wrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start
+}
+
+.component-slider__item {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none
+}
+
+.component-slider__item * {
+    pointer-events: none
+}
+
+.component-slider__item.swiper-slide-active * {
+    pointer-events: auto
+}
+
+.slider-pagination {
+    display: flex;
+    flex-shrink: 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    min-width: 18px;
+    max-width: 100%;
+    min-height: 18px;
+    padding: 10px 0;
+    transition: opacity .3s cubic-bezier(.42, 0, .79, .33), visibility .3s cubic-bezier(.42, 0, .79, .33)
+}
+
+body.is-view .slider-pagination.disabled {
+    display: none
+}
+
+.slider-pagination.color--contrast {
+    color: inherit
+}
+
+.slider-pagination.color--dark {
+    color: #1b1b1c
+}
+
+.slider-pagination.color--light {
+    color: #fff
+}
+
+.slider-pagination.size--small {
+    min-height: 14px
+}
+
+.slider-pagination.position--inside {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 2
+}
+
+.slider-pagination.position--inside:empty {
+    display: none
+}
+
+.slider-pagination.position--outside {
+    padding-bottom: 0;
+    position: relative;
+    bottom: auto
+}
+
+.slider-pagination.type--fraction {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500
+}
+
+.slider-pagination.type--fraction.size--small {
+    font-size: 14px;
+    line-height: 18px
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: all;
+    cursor: pointer;
+    transform: translateZ(0);
+    will-change: transform;
+    transition: all .45s ease
+}
+
+.swiper-pagination-bullet:before {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    display: block;
+    content: "";
+    background: currentColor;
+    opacity: .25;
+    flex-shrink: 0;
+    transform: translateZ(0);
+    will-change: transform, opaticy;
+    transition: transform .45s ease, opacity .45s ease
+}
+
+.swiper-pagination-bullet-active:before,
+.swiper-pagination-bullet[data-state=active]:before {
+    opacity: 1
+}
+
+.swiper-pagination-bullet[data-state=active]:first-child,
+.swiper-pagination-bullet[data-state=normal]:first-child {
+    margin-left: 34px
+}
+
+.swiper-pagination-bullet[data-state=active]:last-child,
+.swiper-pagination-bullet[data-state=normal]:last-child {
+    margin-right: 34px
+}
+
+.swiper-pagination-bullet[data-state=next] {
+    width: 18px
+}
+
+.swiper-pagination-bullet[data-state=next]:first-child {
+    margin-left: 16px
+}
+
+.swiper-pagination-bullet[data-state=next]:last-child {
+    margin-right: 16px
+}
+
+.swiper-pagination-bullet[data-state=next]:before {
+    transform: scale(.8)
+}
+
+.swiper-pagination-bullet[data-state=more] {
+    width: 16px
+}
+
+.swiper-pagination-bullet[data-state=more]:before {
+    transform: scale(.6)
+}
+
+.swiper-pagination-bullet[data-state=hidden] {
+    width: 0!important
+}
+
+.swiper-pagination-bullet[data-state=hidden]:before {
+    opacity: 0;
+    transform: scale(0)
+}
+
+.size--small>.swiper-pagination-bullet {
+    width: 18px;
+    height: 18px
+}
+
+.size--small>.swiper-pagination-bullet:before {
+    width: 8px;
+    height: 8px
+}
+
+.size--small>.swiper-pagination-bullet[data-state=active]:first-child,
+.size--small>.swiper-pagination-bullet[data-state=normal]:first-child {
+    margin-left: 30px
+}
+
+.size--small>.swiper-pagination-bullet[data-state=active]:last-child,
+.size--small>.swiper-pagination-bullet[data-state=normal]:last-child {
+    margin-right: 30px
+}
+
+.size--small>.swiper-pagination-bullet[data-state=next] {
+    width: 16px
+}
+
+.size--small>.swiper-pagination-bullet[data-state=next]:first-child {
+    margin-left: 14px
+}
+
+.size--small>.swiper-pagination-bullet[data-state=next]:last-child {
+    margin-right: 14px
+}
+
+.size--small>.swiper-pagination-bullet[data-state=next]:before {
+    transform: scale(.75)
+}
+
+.size--small>.swiper-pagination-bullet[data-state=more] {
+    width: 14px
+}
+
+.size--small>.swiper-pagination-bullet[data-state=more]:before {
+    transform: scale(.5)
+}
+
+.swiper-pagination-current,
+.swiper-pagination-total {
+    padding: 0 4px
+}
+
+.slider-pagination.type--thumbs {
+    --thumbPad: 14px;
+    --thumbSize: 70px;
+    position: static;
+    justify-content: inherit;
+    padding: 0;
+    margin: 0;
+    margin-top: var(--thumbPad);
+    width: 100%;
+    max-width: none
+}
+
+.slider-pagination.type--thumbs.size--small {
+    --thumbPad: 10px;
+    --thumbSize: 50px
+}
+
+.slider-pagination.type--thumbs .thumbs-slider {
+    display: flex;
+    justify-content: inherit;
+    margin: calc(var(--thumbPad) * -.5);
+    width: calc(100% + var(--thumbPad))
+}
+
+.slider-pagination.type--thumbs .thumbs-slider.is-filled {
+    justify-content: flex-start
+}
+
+.slider-pagination.type--thumbs .thumbs {
+    position: relative;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: transform .65s ease
+}
+
+.slider-pagination.type--thumbs .thumb-item {
+    position: relative;
+    flex-shrink: 0;
+    width: calc(var(--thumbSize) + var(--thumbPad));
+    padding: calc(var(--thumbPad) / 2);
+    cursor: pointer
+}
+
+.slider-pagination.type--thumbs .thumb-item .component-image:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    background: var(--contrastColor);
+    opacity: .35;
+    z-index: 1;
+    transition: opacity .35s ease
+}
+
+.slider-pagination.type--thumbs .thumb-item--active .component-image:before {
+    opacity: 0
+}
+
+.slider-pagination.type--thumbs .component-image {
+    width: 100%;
+    height: auto!important;
+    padding-bottom: 100%!important
+}
+
+.slider-pagination.type--thumbs img {
+    position: static;
+    width: auto;
+    height: 100%
+}
+
+.component-socials {
+    --socialMargin: 0.25em;
+    font-size: 20px;
+    line-height: 0;
+    justify-content: inherit
+}
+
+.component-socials .socials-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: inherit;
+    margin: calc(var(--socialMargin) * -1)
+}
+
+.component-socials .social {
+    display: inline-flex;
+    position: relative;
+    color: currentColor;
+    width: 2em;
+    height: 2em;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity .3s cubic-bezier(.21, .67, .58, 1)
+}
+
+.component-socials .social-icon {
+    display: flex;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    transition: all .3s cubic-bezier(.21, .67, .58, 1);
+    z-index: 1;
+    will-change: opacity
+}
+
+.component-socials .social-container {
+    display: flex;
+    align-items: center;
+    margin: var(--socialMargin)
+}
+
+.component-socials .social-title {
+    margin-left: .6em;
+    margin-right: .6em
+}
+
+.component-socials.style--none .social {
+    width: 1.25em;
+    height: 1.25em
+}
+
+.component-socials.size--small {
+    font-size: 16px
+}
+
+.component-socials.size--small.style--bordered .social:before {
+    border-width: 1px
+}
+
+.component-socials.size--small .social-container .social-title {
+    font-size: 14px;
+    line-height: 16px
+}
+
+.component-socials.size--medium .social-title {
+    font-size: 15px;
+    line-height: 18px
+}
+
+.component-socials.size--large {
+    font-size: 24px
+}
+
+.component-socials.size--large .social-title {
+    font-size: 17px;
+    line-height: 20px
+}
+
+.component-socials.shape--none .social-container .social-title {
+    margin-left: 6px;
+    margin-right: 4px
+}
+
+.component-socials.shape--none.hover--opacity .social {
+    color: currentColor
+}
+
+.is-pointer .component-socials.shape--none.hover--opacity .social-container:hover .social-icon {
+    opacity: .7
+}
+
+.component-socials.shape--none.hover--zoom .social {
+    color: currentColor
+}
+
+.is-pointer .component-socials.shape--none.hover--zoom .social-container:hover .social-icon {
+    transform: scale(1.2);
+    opacity: 1
+}
+
+.component-socials.shape--none.hover--color .social.social-instagram:after {
+    content: none!important
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-instagram {
+    color: #dc3175
+}
+
+.component-socials.shape--round .social.social-icon,
+.component-socials.shape--rounded .social.social-icon,
+.component-socials.shape--square .social.social-icon {
+    width: .9em;
+    height: .9em;
+    left: .55em;
+    top: .55em
+}
+
+.component-socials.shape--round .social:before,
+.component-socials.shape--rounded .social:before,
+.component-socials.shape--square .social:before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    left: 50%;
+    top: 50%;
+    margin-left: -1em;
+    margin-top: -1em;
+    transition: all .3s cubic-bezier(.21, .67, .58, 1);
+    background-color: currentColor
+}
+
+.is-pointer .component-socials.shape--round.hover--opacity .social-container:hover .social-icon,
+.is-pointer .component-socials.shape--rounded.hover--opacity .social-container:hover .social-icon,
+.is-pointer .component-socials.shape--square.hover--opacity .social-container:hover .social-icon {
+    opacity: .7
+}
+
+.is-pointer .component-socials.shape--round.hover--zoom .social-container:hover .social:before,
+.is-pointer .component-socials.shape--rounded.hover--zoom .social-container:hover .social:before,
+.is-pointer .component-socials.shape--square.hover--zoom .social-container:hover .social:before {
+    transform: scale(1.12);
+    opacity: 1
+}
+
+.component-socials.shape--round.style--filled,
+.component-socials.shape--rounded.style--filled,
+.component-socials.shape--square.style--filled {
+    color: var(--currentColor)
+}
+
+.component-socials.shape--round.style--filled .social-icon,
+.component-socials.shape--rounded.style--filled .social-icon,
+.component-socials.shape--square.style--filled .social-icon {
+    color: var(--contrastColor)
+}
+
+.is-pointer .component-socials.shape--round.style--filled.hover--color .social-container:hover .social-icon,
+.is-pointer .component-socials.shape--rounded.style--filled.hover--color .social-container:hover .social-icon,
+.is-pointer .component-socials.shape--square.style--filled.hover--color .social-container:hover .social-icon {
+    color: #fff
+}
+
+.component-socials.shape--round.style--bordered .social,
+.component-socials.shape--rounded.style--bordered .social,
+.component-socials.shape--square.style--bordered .social {
+    color: currentColor
+}
+
+.component-socials.shape--round.style--bordered .social:before,
+.component-socials.shape--rounded.style--bordered .social:before,
+.component-socials.shape--square.style--bordered .social:before {
+    border: 2px solid currentColor;
+    background: none
+}
+
+.component-socials.shape--round.style--bordered .social.social-instagram:after,
+.component-socials.shape--rounded.style--bordered .social.social-instagram:after,
+.component-socials.shape--square.style--bordered .social.social-instagram:after {
+    content: none!important
+}
+
+.is-pointer .component-socials.shape--round.style--bordered.hover--color .social-container:hover .social-instagram,
+.is-pointer .component-socials.shape--rounded.style--bordered.hover--color .social-container:hover .social-instagram,
+.is-pointer .component-socials.shape--square.style--bordered.hover--color .social-container:hover .social-instagram {
+    color: #dc3175
+}
+
+.component-socials.shape--none.hover--color .social-container .social-instagram:after,
+.component-socials.shape--round.hover--color .social-container .social-instagram:after,
+.component-socials.shape--rounded.hover--color .social-container .social-instagram:after,
+.component-socials.shape--square.hover--color .social-container .social-instagram:after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    opacity: 0;
+    left: 50%;
+    top: 50%;
+    margin-left: -1em;
+    margin-top: -1em;
+    transition: all .3s cubic-bezier(.21, .67, .58, 1);
+    background-color: currentColor
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-fb,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-fb,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-fb,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-fb {
+    color: #1877f2
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-vk,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-vk,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-vk,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-vk {
+    color: #4680c2
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-instagram:after,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-instagram:after,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-instagram:after,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-instagram:after {
+    opacity: 1;
+    background: #dc3175
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-twitter,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-twitter,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-twitter,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-twitter {
+    color: #1da1f2
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-telegram,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-telegram,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-telegram,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-telegram {
+    color: #08c
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-ok,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-ok,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-ok,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-ok {
+    color: #ed812b
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-gplus,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-gplus,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-gplus,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-gplus {
+    color: #dd4b39
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-skype,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-skype,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-skype,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-skype {
+    color: #00aff0
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-yt,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-yt,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-yt,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-yt {
+    color: red
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-vimeo,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-vimeo,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-vimeo,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-vimeo {
+    color: #1ab7ea
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-snapchat,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-snapchat,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-snapchat,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-snapchat {
+    color: #fffc00
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-whatsapp,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-whatsapp,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-whatsapp,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-whatsapp {
+    color: #65cf72
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-periscope,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-periscope,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-periscope,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-periscope {
+    color: #3aa4c6
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-viber,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-viber,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-viber,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-viber {
+    color: #7360f2
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-behance,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-behance,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-behance,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-behance {
+    color: #1769ff
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-dribble,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-dribble,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-dribble,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-dribble {
+    color: #ea4c89
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-p,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-p,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-p,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-p {
+    color: #e60023
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-in,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-in,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-in,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-in {
+    color: #069
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-tripadvisor,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-tripadvisor,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-tripadvisor,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-tripadvisor {
+    color: #34e0a1
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-tiktok,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-tiktok,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-tiktok,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-tiktok {
+    color: #fe2c55
+}
+
+.is-pointer .component-socials.shape--none.hover--color .social-container:hover .social-messenger,
+.is-pointer .component-socials.shape--round.hover--color .social-container:hover .social-messenger,
+.is-pointer .component-socials.shape--rounded.hover--color .social-container:hover .social-messenger,
+.is-pointer .component-socials.shape--square.hover--color .social-container:hover .social-messenger {
+    color: #0084ff
+}
+
+.is-pointer .component-socials.colored.hover--color .social-container:hover .social {
+    opacity: .9
+}
+
+.component-socials.shape--round .social:after,
+.component-socials.shape--round .social:before {
+    border-radius: 100%
+}
+
+.component-socials.shape--rounded .social:after,
+.component-socials.shape--rounded .social:before {
+    border-radius: .25em
+}
+
+.component-socials.colored.style--filled .social .social-icon {
+    color: #fff
+}
+
+.component-socials.colored.style--filled .social.social-instagram:before {
+    background: -webkit-radial-gradient(32% 106%, circle farthest-corner, #ffe17d 0, #ffcd69 10%, #fa9137 28%, #eb4141 42%, transparent 82%), -webkit-linear-gradient(-45deg, #234bd7 12%, #c33cbe 58%)
+}
+
+.component-socials.colored.style--filled .social.social-messenger:before {
+    background: linear-gradient(180deg, #00b2ff, #006aff)
+}
+
+.component-socials.colored.style--filled .social.social-whatsapp:before {
+    background: linear-gradient(0deg, #20b038, #60d66a)
+}
+
+.component-socials.colored.style--filled .social.social-telegram:before {
+    background: linear-gradient(203.2deg, #37aee2 21.67%, #1e96c8 70%)
+}
+
+.component-socials.colored.style--bordered .social.social-instagram {
+    color: #dc3175
+}
+
+.component-socials.colored.style--bordered .social.social-instagram:before {
+    border-color: #dc3175
+}
+
+.component-socials.colored.style--bordered .social.social-messenger {
+    color: #0084ff
+}
+
+.component-socials.colored.style--bordered .social.social-messenger:before {
+    border-color: #0084ff
+}
+
+.component-socials.colored .social.social-fb {
+    color: #1877f2
+}
+
+.component-socials.colored .social.social-vk {
+    color: #4680c2
+}
+
+.component-socials.colored .social.social-instagram {
+    color: #dc3175
+}
+
+.component-socials.colored .social.social-twitter {
+    color: #1da1f2
+}
+
+.component-socials.colored .social.social-telegram {
+    color: #08c
+}
+
+.component-socials.colored .social.social-ok {
+    color: #ed812b
+}
+
+.component-socials.colored .social.social-gplus {
+    color: #dd4b39
+}
+
+.component-socials.colored .social.social-skype {
+    color: #00aff0
+}
+
+.component-socials.colored .social.social-yt {
+    color: red
+}
+
+.component-socials.colored .social.social-vimeo {
+    color: #1ab7ea
+}
+
+.component-socials.colored .social.social-snapchat {
+    color: #fffc00
+}
+
+.component-socials.colored .social.social-whatsapp {
+    color: #65cf72
+}
+
+.component-socials.colored .social.social-periscope {
+    color: #3aa4c6
+}
+
+.component-socials.colored .social.social-viber {
+    color: #7360f2
+}
+
+.component-socials.colored .social.social-behance {
+    color: #1769ff
+}
+
+.component-socials.colored .social.social-dribble {
+    color: #ea4c89
+}
+
+.component-socials.colored .social.social-p {
+    color: #e60023
+}
+
+.component-socials.colored .social.social-in {
+    color: #069
+}
+
+.component-socials.colored .social.social-tripadvisor {
+    color: #34e0a1
+}
+
+.component-socials.colored .social.social-tiktok {
+    color: #fe2c55
+}
+
+.component-socials.colored .social.social-messenger {
+    color: #0084ff
+}
+
+.flexbe-table-container {
+    --paddingX: 5px;
+    --paddingY: 5px;
+    --tableBorderColor: var(--currentColor);
+    --tableBorderWidth: 1px;
+    --tableTopHeaderOddBg: transparent;
+    --tableTopHeaderOddColor: var(--currentColor);
+    --tableTopHeaderOddContrast: var(--currentContrast);
+    --tableTopHeaderEvenBg: transparent;
+    --tableTopHeaderEvenColor: var(--currentColor);
+    --tableTopHeaderEvenContrast: var(--currentContrast);
+    --tableSideHeaderOddBg: transparent;
+    --tableSideHeaderOddColor: var(--currentColor);
+    --tableSideHeaderOddContrast: var(--currentContrast);
+    --tableSideHeaderEvenBg: transparent;
+    --tableSideHeaderEvenColor: var(--currentColor);
+    --tableSideHeaderEvenContrast: var(--currentContrast);
+    --tableOddBg: transparent;
+    --tableOddColor: var(--currentColor);
+    --tableOddContrast: var(--currentContrast);
+    --tableEvenBg: transparent;
+    --tableEvenColor: var(--currentColor);
+    --tableEvenContrast: var(--currentContrast)
+}
+
+.flexbe-table__font--cell {
+    font-size: var(--tableContentTextSize);
+    font-weight: var(--tableContentTextWeight);
+    line-height: var(--tableContentTextLine)
+}
+
+.flexbe-table__font--side {
+    font-size: var(--tableSideHeaderTextSize);
+    font-weight: var(--tableSideHeaderTextWeight);
+    line-height: var(--tableSideHeaderTextLine)
+}
+
+.flexbe-table__font--top {
+    font-size: var(--tableTopHeaderTextSize);
+    font-weight: var(--tableTopHeaderTextWeight);
+    line-height: var(--tableTopHeaderTextLine)
+}
+
+.flexbe-table__fill--cellOdd {
+    --currentColor: var(--tableOddColor);
+    --contrastColor: var(--tableOddContrast);
+    background: var(--tableOddBg)
+}
+
+.flexbe-table__fill--cellEven {
+    --currentColor: var(--tableEvenColor);
+    --contrastColor: var(--tableEvenContrast);
+    background: var(--tableEvenBg)
+}
+
+.flexbe-table__fill--sideOdd {
+    --currentColor: var(--tableSideHeaderOddColor);
+    --contrastColor: var(--tableSideHeaderOddContrast);
+    background: var(--tableSideHeaderOddBg)
+}
+
+.flexbe-table__fill--sideEven {
+    --currentColor: var(--tableSideHeaderEvenColor);
+    --contrastColor: var(--tableSideHeaderEvenContrast);
+    background: var(--tableSideHeaderEvenBg)
+}
+
+.flexbe-table__fill--topOdd {
+    --currentColor: var(--tableTopHeaderOddColor);
+    --contrastColor: var(--tableTopHeaderOddContrast);
+    background: var(--tableTopHeaderOddBg)
+}
+
+.flexbe-table__fill--topEven {
+    --currentColor: var(--tableTopHeaderEvenColor);
+    --contrastColor: var(--tableTopHeaderEvenContrast);
+    background: var(--tableTopHeaderEvenBg)
+}
+
+.flexbe-table {
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center
+}
+
+.flexbe-table__head {
+    display: table-header-group
+}
+
+.flexbe-table__body,
+.flexbe-table__head {
+    vertical-align: middle;
+    border-color: inherit
+}
+
+.flexbe-table__body {
+    display: table-row-group
+}
+
+.flexbe-table__row {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit
+}
+
+.flexbe-table__cell {
+    display: table-cell;
+    vertical-align: inherit;
+    padding: var(--paddingY) var(--paddingX)
+}
+
+.flexbe-table__row--first .flexbe-table__cell {
+    width: var(--colWidth, auto);
+    min-width: var(--colWidth, 0)
+}
+
+.flexbe-table--border-around,
+.flexbe-table--border_full .flexbe-table__cell {
+    border: var(--tableBorderWidth) solid var(--tableBorderColor)
+}
+
+.flexbe-table--border_full .flexbe-table__row--first .flexbe-table__cell {
+    border-top: 0
+}
+
+.flexbe-table--border_full .flexbe-table__row--last .flexbe-table__cell {
+    border-bottom: 0
+}
+
+.flexbe-table--border_full .flexbe-table__cell--first {
+    border-left: 0
+}
+
+.flexbe-table--border_full .flexbe-table__cell--last {
+    border-right: 0
+}
+
+.flexbe-table--border_vertical .flexbe-table__cell {
+    border-left: var(--tableBorderWidth) solid var(--tableBorderColor);
+    border-right: var(--tableBorderWidth) solid var(--tableBorderColor)
+}
+
+.flexbe-table--border_vertical .flexbe-table__cell--first {
+    border-left: 0
+}
+
+.flexbe-table--border_vertical .flexbe-table__cell--last {
+    border-right: 0
+}
+
+.flexbe-table--border_horizontal .flexbe-table__cell {
+    border-top: var(--tableBorderWidth) solid var(--tableBorderColor);
+    border-bottom: var(--tableBorderWidth) solid var(--tableBorderColor)
+}
+
+.flexbe-table--border_horizontal .flexbe-table__row--first .flexbe-table__cell {
+    border-top: 0
+}
+
+.flexbe-table--border_horizontal .flexbe-table__row--last .flexbe-table__cell {
+    border-bottom: 0
+}
+
+.component-timer {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    justify-content: inherit;
+    font-size: 46px;
+    line-height: 1.083
+}
+
+.component-timer[data-size=xs] {
+    font-size: 18px
+}
+
+.component-timer[data-size=xs] .number {
+    max-width: 30px
+}
+
+.component-timer[data-size=xs] .number span {
+    font-size: 11px;
+    line-height: 14px;
+    margin-top: 6px
+}
+
+.component-timer[data-size=xs] .colon {
+    padding: 0 2px
+}
+
+.component-timer[data-size=s] {
+    font-size: 30px
+}
+
+.component-timer[data-size=m] {
+    font-size: 40px
+}
+
+.component-timer[data-size=xl] {
+    font-size: 56px
+}
+
+.component-timer[data-size=xl] .number span {
+    font-size: 14px
+}
+
+.component-timer[data-size=xl] .colon {
+    padding: 0 .4em
+}
+
+.timer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: inherit;
+    width: 100%
+}
+
+.timer .number {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    white-space: nowrap;
+    text-align: center
+}
+
+.timer .number.d .title i:first-child[data-value="0"],
+.timer .number.d .title i:first-child[data-value="0"]+[data-value="0"] {
+    display: none
+}
+
+.timer .number span {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 9px;
+    opacity: .6;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.timer .title {
+    display: flex
+}
+
+.timer .title i {
+    font: inherit;
+    text-transform: inherit;
+    display: inline-block;
+    letter-spacing: inherit
+}
+
+.timer .colon {
+    padding: 0 .25em;
+    align-self: flex-start;
+    text-align: center
+}
+
+.component-video {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.5%
+}
+
+.component-video .custom-video,
+.component-video embed,
+.component-video iframe,
+.component-video object {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.component-video .video-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000
+}
+
+.component-video[data-loop="1"] .video-wrapper {
+    background-color: transparent
+}
+
+.component-video[data-loop="1"] .video-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0
+}
+
+.component-video[data-custom="1"] .custom-video {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.component-video .video-preview {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    background-color: #000;
+    transition: opacity .3s cubic-bezier(.21, .67, .58, 1), visibility .3s cubic-bezier(.21, .67, .58, 1)
+}
+
+.component-video .video-preview .component-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0!important;
+    z-index: 0
+}
+
+.component-video .video-preview .play-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 96px;
+    height: 96px;
+    color: #fff;
+    z-index: 1
+}
+
+.component-video .video-preview .play-btn:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    border-radius: 100%;
+    background: rgba(27, 27, 28, .2);
+    border: 2px solid #fff;
+    transform: scale(.91);
+    transition: all .3s cubic-bezier(.21, .67, .58, 1)
+}
+
+.component-video .video-preview .preloader {
+    display: none;
+    width: 28px;
+    height: 28px
+}
+
+.component-video .video-preview .preloader .icon {
+    display: block;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto
+}
+
+.component-video .video-preview .preloader .icon .circular-loader {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 6px;
+    transform-origin: center center
+}
+
+.component-video .video-preview .preloader .icon .circular-loader .loader-path {
+    stroke-dasharray: 150, 200;
+    stroke-dashoffset: -10;
+    stroke-linecap: round;
+    animation: circular-loader 1.5s ease-in-out infinite reverse;
+    stroke-width: 3
+}
+
+.component-video .video-preview .play-icon {
+    position: absolute;
+    width: 28px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -11px;
+    left: 50%;
+    top: 50%
+}
+
+.component-video .video-preview.preloading .play-icon {
+    display: none
+}
+
+.component-video .video-preview.preloading .preloader {
+    display: block
+}
+
+.component-video.overlayed {
+    cursor: pointer
+}
+
+.component-video.overlayed .video-preview {
+    display: block
+}
+
+.is-pointer .component-video.overlayed:hover {
+    cursor: pointer
+}
+
+.is-pointer .component-video.overlayed:hover .video-preview:not(.preloading) .play-btn:before {
+    transform: scale(1)
+}
+
+.is-screenshoter .cookies-wrap {
+    display: none!important
+}
+
+.cookies-wrap {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2147483647
+}
+
+.cookies-wrap,
+.cookies-wrap * {
+    pointer-events: none
+}
+
+.cookies-wrap .cookies-container {
+    background: #fff;
+    font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    box-shadow: 0 5px 15px rgba(54, 54, 64, .2);
+    position: relative
+}
+
+.cookies-wrap .cookies-container .cookies-button-more,
+.cookies-wrap .cookies-container a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: color .18s;
+    color: #4773ff
+}
+
+.cookies-wrap .cookies-container .cookies-button-more {
+    display: none
+}
+
+.cookies-wrap .cookies-container .cookies-button-more.show {
+    display: inline
+}
+
+.cookies-wrap .cookies-container .cookies-button {
+    padding: 9px 20px;
+    border-radius: 3px;
+    line-height: 16px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .3s ease;
+    flex-shrink: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.cookies-wrap .cookies-container .cookies-close {
+    color: #30343b;
+    opacity: .3;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    transition: opacity .3s ease;
+    justify-content: center;
+    align-items: center
+}
+
+.cookies-wrap .cookies-container .cookies-close svg {
+    width: 12px;
+    height: 12px
+}
+
+@media (any-hover:hover) {
+    .cookies-wrap .cookies-container .cookies-button:hover {
+        opacity: .8
+    }
+    .cookies-wrap .cookies-container .cookies-close:hover {
+        opacity: .57
+    }
+    .cookies-wrap .cookies-container .cookies-button-more:hover,
+    .cookies-wrap .cookies-container a:hover {
+        text-decoration: none;
+        color: #7a9aff
+    }
+}
+
+.cookies-wrap.style--center_long {
+    left: 0;
+    max-height: 50%;
+    min-height: 60px;
+    transform: translateY(150%);
+    transition: transform .8s cubic-bezier(0, 0, .2, 1)
+}
+
+.cookies-wrap.style--center_long .cookies-container {
+    box-shadow: none;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    padding: 13px;
+    color: #fff
+}
+
+.cookies-wrap.style--center_long .cookies-container .cookies-button-container {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    flex-shrink: 0;
+    max-width: 20%
+}
+
+.cookies-wrap.style--center_long .cookies-container .cookies-button-container .cookies-button-more {
+    display: none
+}
+
+.cookies-wrap.style--center_long .cookies-container .cookies-button {
+    background: #fff;
+    color: #30343b;
+    margin-left: 20px;
+    max-width: 90%;
+    max-height: 100%
+}
+
+.cookies-wrap.style--center_long .cookies-container .cookies-close {
+    display: none
+}
+
+.cookies-wrap.style--center_long .cookies-container .cookies-content {
+    display: flex;
+    align-items: center
+}
+
+.cookies-wrap.style--center_long .cookies-container .cookies-content span {
+    margin: auto
+}
+
+.cookies-wrap.style--center_long .cookies-container .cookies-button-more,
+.cookies-wrap.style--center_long .cookies-container a {
+    color: #fff;
+    text-decoration: underline
+}
+
+@media (any-hover:hover) {
+    .cookies-wrap.style--center_long .cookies-container .cookies-button-more:hover,
+    .cookies-wrap.style--center_long .cookies-container a:hover {
+        text-decoration: none;
+        color: #fff
+    }
+}
+
+.cookies-wrap.style--center_compact {
+    max-height: 50%;
+    bottom: 25px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .25s, transform .35s ease;
+    padding: 0 20px
+}
+
+.cookies-wrap.style--center_compact.show {
+    transition: transform .5s cubic-bezier(0, 0, .2, 1), opacity .8s cubic-bezier(0, 0, .2, 1)
+}
+
+.cookies-wrap.style--center_compact .cookies-container {
+    padding: 15px 40px 15px 20px;
+    border-radius: 5px;
+    min-width: 447px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    pointer-events: auto;
+    text-align: center
+}
+
+.cookies-wrap.style--center_compact .cookies-container .cookies-button {
+    display: none
+}
+
+.cookies-wrap.style--center_compact .cookies-container .cookies-close {
+    flex-shrink: 0;
+    position: absolute;
+    top: 9px;
+    right: 10px
+}
+
+.cookies-wrap.style--center_compact .cookies-container .cookies-button-container {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    flex-shrink: 0
+}
+
+.cookies-wrap.style--center_compact .cookies-container .cookies-button-container .cookies-button-more {
+    display: none
+}
+
+.cookies-wrap.style--right_bottom {
+    min-height: 148px;
+    max-height: 50%;
+    justify-content: flex-end;
+    transform: translateX(30px);
+    bottom: 30px;
+    padding-right: 30px;
+    opacity: 0;
+    transition: opacity .3s, transform .4s ease
+}
+
+.cookies-wrap.style--right_bottom.show {
+    transition: transform .8s cubic-bezier(0, 0, .2, 1), opacity .8s cubic-bezier(0, 0, .2, 1)
+}
+
+.cookies-wrap.style--right_bottom .cookies-container {
+    border-radius: 3px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: unset;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px
+}
+
+.cookies-wrap.style--right_bottom .cookies-container .cookies-button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+    margin-top: auto;
+    flex-direction: row-reverse
+}
+
+.cookies-wrap.style--right_bottom .cookies-container .cookies-content {
+    margin-right: 10px;
+    margin-bottom: 20px
+}
+
+.cookies-wrap.style--right_bottom .cookies-container .cookies-content .cookies-button-more {
+    display: none
+}
+
+.cookies-wrap.style--right_bottom .cookies-container .cookies-button {
+    background: #30343b;
+    color: #fff;
+    margin-right: 15px;
+    max-width: 50%;
+    max-height: 100px
+}
+
+.cookies-wrap.style--right_bottom .cookies-container .cookies-close {
+    position: absolute;
+    top: 3px;
+    right: 3px
+}
+
+.cookies-wrap.style--right_bottom .cookies-container .cookies-button-more {
+    margin-left: auto;
+    max-height: 100px
+}
+
+.cookies-wrap.show {
+    transform: translate(0);
+    opacity: 1
+}
+
+.cookies-wrap.show * {
+    pointer-events: auto
+}
+
+@media screen and (max-height:570px) and (max-width:980px) and (orientation:landscape),
+screen and (max-width:767px) {
+    .cookies-wrap.style--center_compact,
+    .cookies-wrap.style--center_long,
+    .cookies-wrap.style--right_bottom {
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        opacity: 1;
+        transform: translateY(150%);
+        padding: 0;
+        min-height: auto
+    }
+    .cookies-wrap.style--center_compact .cookies-container,
+    .cookies-wrap.style--center_long .cookies-container,
+    .cookies-wrap.style--right_bottom .cookies-container {
+        padding: 15px 50px 15px 20px;
+        box-shadow: 0 -5px 5px rgba(48, 52, 59, .03);
+        text-align: left;
+        min-width: 100%;
+        width: 100%;
+        border-radius: 0;
+        background: #fff;
+        color: #30343b
+    }
+    .cookies-wrap.style--center_compact .cookies-container .cookies-close,
+    .cookies-wrap.style--center_long .cookies-container .cookies-close,
+    .cookies-wrap.style--right_bottom .cookies-container .cookies-close {
+        position: absolute;
+        display: flex;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 100%
+    }
+    .cookies-wrap.style--center_compact .cookies-container .cookies-close svg,
+    .cookies-wrap.style--center_long .cookies-container .cookies-close svg,
+    .cookies-wrap.style--right_bottom .cookies-container .cookies-close svg {
+        width: 14px;
+        height: 14px
+    }
+    .cookies-wrap.style--center_compact .cookies-container .cookies-content,
+    .cookies-wrap.style--center_long .cookies-container .cookies-content,
+    .cookies-wrap.style--right_bottom .cookies-container .cookies-content {
+        margin-bottom: 0;
+        margin-right: 0
+    }
+    .cookies-wrap.style--center_compact .cookies-container .cookies-content a.cookies-button-more,
+    .cookies-wrap.style--center_long .cookies-container .cookies-content a.cookies-button-more,
+    .cookies-wrap.style--right_bottom .cookies-container .cookies-content a.cookies-button-more {
+        display: none
+    }
+    .cookies-wrap.style--center_compact .cookies-container .cookies-content .cookies-button-more.show,
+    .cookies-wrap.style--center_compact .cookies-container .cookies-content a,
+    .cookies-wrap.style--center_long .cookies-container .cookies-content .cookies-button-more.show,
+    .cookies-wrap.style--center_long .cookies-container .cookies-content a,
+    .cookies-wrap.style--right_bottom .cookies-container .cookies-content .cookies-button-more.show,
+    .cookies-wrap.style--right_bottom .cookies-container .cookies-content a {
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+        transition: color .18s;
+        color: #4773ff
+    }
+    .cookies-wrap.style--center_compact .cookies-button,
+    .cookies-wrap.style--center_compact .cookies-container .cookies-button-container,
+    .cookies-wrap.style--center_long .cookies-button,
+    .cookies-wrap.style--center_long .cookies-container .cookies-button-container,
+    .cookies-wrap.style--right_bottom .cookies-button,
+    .cookies-wrap.style--right_bottom .cookies-container .cookies-button-container {
+        display: none
+    }
+    .cookies-wrap.show {
+        transform: translate(0);
+        opacity: 1
+    }
+}
+
+@media screen and (max-height:570px) and (max-width:980px) and (orientation:landscape) and (any-hover:hover),
+screen and (max-width:767px) and (any-hover:hover) {
+    .cookies-wrap.style--center_compact .cookies-container .cookies-content .cookies-button-more:hover,
+    .cookies-wrap.style--center_compact .cookies-container .cookies-content a:hover,
+    .cookies-wrap.style--center_long .cookies-container .cookies-content .cookies-button-more:hover,
+    .cookies-wrap.style--center_long .cookies-container .cookies-content a:hover,
+    .cookies-wrap.style--right_bottom .cookies-container .cookies-content .cookies-button-more:hover,
+    .cookies-wrap.style--right_bottom .cookies-container .cookies-content a:hover {
+        text-decoration: none;
+        color: #7a9aff
+    }
+}
+
+#cbh.cbh,
+#supportTrigger,
+._show_1e.wrap_mW,
+.cbh-body-fade,
+.wrap_mW {
+    z-index: 2000000000!important
+}
+
+.flexbe-tooltip {
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    transition: opacity .2s ease, transform .3s ease;
+    padding-bottom: 4px;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transform: translateY(-3px)
+}
+
+.flexbe-tooltip:before {
+    content: attr(data-value);
+    line-height: 18px;
+    display: block;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 7px 10px;
+    color: #fff;
+    background-color: #171717
+}
+
+.flexbe-tooltip:after {
+    content: "";
+    transform: translate(-50%);
+    position: absolute;
+    left: 50%;
+    right: auto;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid currentColor;
+    transition: left .3s ease
+}

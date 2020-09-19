@@ -1386,6 +1386,10 @@ header {
     clear: both
 }
 
+.margin-left-5 {
+    margin-left: 10px;
+}
+
 .top-menu>li {
     float: left;
     border-right: 1px solid #3a4150;
@@ -1393,10 +1397,19 @@ header {
     margin: 0
 }
 
+.pos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+}
+
 .top-menu>li>a {
     padding: 10px 20px;
     color: #fff;
-    display: block;
+    display: flex;
+    justify-content: center;
     font-size: 13px;
     text-decoration: none;
     line-height: 22px
@@ -3220,7 +3233,7 @@ footer {
 }
 
 .footer-menu-text {
-    color: #a6a096;
+    color: #fff;
     font-size: 20px;
     margin: 10px 0px;
     line-height: 1;
@@ -3228,7 +3241,7 @@ footer {
 }
 
 .contact-block__text {
-    color: #a6a096;
+    color: #fff;
     font-size: 20px;
     margin: 10px 0px;
     line-height: 1;
@@ -3236,18 +3249,18 @@ footer {
 }
 
 .contact-block__text a {
-    color: #a6a096;
+    color: #fff;
 }
 
 .footer-copyright {
     font-size: 11px;
-    color: #a6a096;
+    color: #fff;
     line-height: normal;
     margin: 0
 }
 
 .footer-copyright a {
-    color: #a6a096;
+    color: #fff;
 }
 
 .footer-credits {

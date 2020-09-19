@@ -3190,7 +3190,8 @@ footer {
 }
 
 .footer-logo {
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    justify-content: center;
 }
 
 .footer-logo a {
@@ -3212,12 +3213,30 @@ footer {
     top: -0.7em
 }
 
+.margin-top-2 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
 .footer-menu-text {
     color: #a6a096;
     font-size: 20px;
-    margin: 0;
+    margin: 10px 0px;
     line-height: 1;
     font-weight: 500;
+}
+
+.contact-block__text {
+    color: #a6a096;
+    font-size: 20px;
+    margin: 10px 0px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.contact-block__text a {
+    color: #a6a096;
 }
 
 .footer-copyright {

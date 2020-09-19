@@ -3212,6 +3212,14 @@ footer {
     top: -0.7em
 }
 
+.footer-menu-text {
+    color: #a6a096;
+    font-size: 20px;
+    margin: 0;
+    line-height: 1;
+    font-weight: 500;
+}
+
 .footer-copyright {
     font-size: 11px;
     color: #a6a096;

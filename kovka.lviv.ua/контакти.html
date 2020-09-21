@@ -58,7 +58,20 @@
             })), (r = t.source || {}).concatemoji ? d(r.concatemoji) : r.wpemoji && r.twemoji && (d(r.twemoji), d(r.wpemoji)))
         }(window, document, window._wpemojiSettings);
     </script>
-
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
     <link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min.css?ver=5.3.4' type='text/css' media='all'>
     <link rel='stylesheet' id='menu-image-css' href='wp-content/plugins/menu-image/includes/css/menu-image.css?ver=2.9.5' type='text/css' media='all'>
     <link rel='stylesheet' id='contact-form-7-css' href='wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.6' type='text/css' media='all'>
@@ -103,23 +116,7 @@
             display: none;
         }
     </style>
-    <style>
-        .frontpage-cta1.parallax {
-            background-image: url(http://kovka.lviv.ua/wp-content/uploads/2017/07/bg-parallax-1.jpg);
-        }
-        
-        .frontpage-cta1.no-parallax {
-            background-image: url(http://kovka.lviv.ua/wp-content/uploads/2017/07/bg-parallax-1.jpg);
-        }
-        
-        .frontpage-cta1.parallax:before {
-            background-color: #0e2431
-        }
-        
-        .frontpage-cta1.no-parallax:before {
-            background-color: #0e2431
-        }
-    </style>
+
 
 
     <link rel="icon" href="img/cropped-favicon-78x78.png" sizes="32x32">
@@ -161,11 +158,11 @@
                         <nav class="navbar navbar-default">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
-									<span class="sr-only">Toggle Navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
+								<span class="sr-only">Toggle Navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
                             </div>
                             <div class="collapse navbar-collapse">
                                 <ul id="menu-main" class="nav navbar-nav">
@@ -173,77 +170,26 @@
                                     <li id="menu-item-510" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-510 dropdown"><a title="Ковані Вироби" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Ковані Вироби <span class="caret"></span></a>
                                         <ul role="menu" class=" dropdown-menu">
                                             <li id="menu-item-732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-732">
-                                                <a title="Ковані брами" href="ковані-брами.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_vorota.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Ковані брами</span></a>
+                                                <a title="Вхідні двері ковані" href="вхідні-двері-ковані.html" class="menu-image-title-after menu-image-not-hovered">
+                                                    <img width="144" height="144" src="img/ic_menu_dashky.png" class="menu-image menu-image-title-after" alt="">
+                                                    <span class="menu-image-title-after menu-image-title">Вхідні двері ковані</span></a>
                                             </li>
                                             <li id="menu-item-674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-674">
-                                                <a title="Перила на сходи" href="ковані-перила-на-сходи.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_perila.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Перила на сходи</span></a>
+                                                <a title="Вхідні двері фасадні" href="вхідні-двері-фасадні.html" class="menu-image-title-after menu-image-not-hovered">
+                                                    <img width="144" height="144" src="img/ic_menu_door_decor.png" class="menu-image menu-image-title-after" alt="">
+                                                    <span class="menu-image-title-after menu-image-title">Вхідні двері фасадні</span></a>
                                             </li>
                                             <li id="menu-item-2099" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2099">
-                                                <a title="Ковані балкони" href="ковані-балкони-львів.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_balcony.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Ковані балкони</span></a>
+                                                <a title="Ворота, ковані перила, дашки" href="ворота-ковані-перила-дашки.html" class="menu-image-title-after menu-image-not-hovered">
+                                                    <img width="144" height="144" src="img/ic_menu_vorota.png" class="menu-image menu-image-title-after" alt="">
+                                                    <span class="menu-image-title-after menu-image-title">Ворота, ковані перила, дашки</span></a>
                                             </li>
                                             <li id="menu-item-733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-733">
-                                                <a title="Решітки на вікна" href="решітки-на-вікна.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_reshitky.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Решітки на вікна</span></a>
+                                                <a title="Розсувні решітки" href="розсувні-решітки.html" class="menu-image-title-after menu-image-not-hovered">
+                                                    <img width="144" height="144" src="img/ic_menu_reshitky.png" class="menu-image menu-image-title-after" alt="">
+                                                    <span class="menu-image-title-after menu-image-title">Розсувні решітки</span></a>
                                             </li>
-                                            <li id="menu-item-735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-735">
-                                                <a title="Ковані огорожі" href="ковані-огорожі.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_ohorogy.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Ковані огорожі</span></a>
-                                            </li>
-                                            <li id="menu-item-734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-734">
-                                                <a title="Металеві сходи" href="металеві-сходи-львів.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_shody.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Металеві сходи</span></a>
-                                            </li>
-                                            <li id="menu-item-2100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2100">
-                                                <a title="Ковані дашки" href="ковані-дашки.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_dashky.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Ковані дашки</span></a>
-                                            </li>
-                                            <li id="menu-item-736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-736">
-                                                <a title="Відсувні ворота" href="відкатні-ворота.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_vidkatny_vorota.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Відсувні ворота</span></a>
-                                            </li>
-                                            <li id="menu-item-2090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2090">
-                                                <a title="Ковані лавки" href="ковані-лавки.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_lavky.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Ковані лавки</span></a>
-                                            </li>
-                                            <li id="menu-item-2097" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2097">
-                                                <a title="Металеві двері" href="металеві-двері.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_doors.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Металеві двері</span></a>
-                                            </li>
-                                            <li id="menu-item-3505" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3505">
-                                                <a title="Ковані ліжка" href="ковані-ліжка.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_bed.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Ковані ліжка</span></a>
-                                            </li>
-                                            <li id="menu-item-2093" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2093">
-                                                <a title="Ковані дзеркала" href="ковані-дзеркала.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_mirrors.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Ковані дзеркала</span></a>
-                                            </li>
-                                            <li id="menu-item-2094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2094">
-                                                <a title="Ковані столи" href="ковані-столи.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_tables.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Ковані столи</span></a>
-                                            </li>
-                                            <li id="menu-item-2087" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2087">
-                                                <a title="Камінні решітки та набори" href="камінна-решітка-та-набір.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_kamin.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Камінні решітки та набори</span></a>
-                                            </li>
-                                            <li id="menu-item-2092" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2092">
-                                                <a title="Вішалки для одягу" href="вішалки-для-одягу.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_vishalka.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Вішалки для одягу</span></a>
-                                            </li>
-                                            <li id="menu-item-2089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2089">
-                                                <a title="Ковані підвазонники" href="підставки-під-вазони.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_pidkvitnik.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Ковані підвазонники</span></a>
-                                            </li>
-                                            <li id="menu-item-2088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2088">
-                                                <a title="Ковані мангали" href="ковані-мангали.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_mangal.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Ковані мангали</span></a>
-                                            </li>
-                                            <li id="menu-item-2086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2086">
-                                                <a title="Ковані бра та люстри" href="ковані-світильники-та-люстри.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_well_lustra.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Ковані бра та люстри</span></a>
-                                            </li>
-                                            <li id="menu-item-2084" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2084">
-                                                <a title="Кований декор інтер&#039;єру" href="кований-декор.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_decor.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Кований декор інтер&#8217;єру</span></a>
-                                            </li>
-                                            <li id="menu-item-2091" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2091">
-                                                <a title="Дашки на криницю" href="дашки-на-криницю.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_well_roof.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Дашки на криницю</span></a>
-                                            </li>
-                                            <li id="menu-item-2096" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2096">
-                                                <a title="Навіси для автомобілів" href="навіс-для-авто.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_car_roof.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Навіси для автомобілів</span></a>
-                                            </li>
-                                            <li id="menu-item-2083" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2083">
-                                                <a title="Накладки на двері" href="ковані-завіси.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_door_decor.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Накладки на двері</span></a>
-                                            </li>
-                                            <li id="menu-item-2095" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2095">
-                                                <a title="Будівельне риштування" href="риштування.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_rishtuvannia.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Будівельне риштування</span></a>
-                                            </li>
-                                            <li id="menu-item-2085" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2085">
-                                                <a title="Контейнери для сміття" href="контейнери-для-сміття.html" class="menu-image-title-after menu-image-not-hovered"><img width="144" height="144" src="wp-content/uploads/ic_menu_trash.png" class="menu-image menu-image-title-after" alt=""><span class="menu-image-title-after menu-image-title">Контейнери для сміття</span></a>
-                                            </li>
+
                                         </ul>
                                     </li>
                                     <li id="menu-item-538" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-538"><a title="Ціни" href="ціна-ковки.html">Ціни</a></li>
@@ -315,6 +261,7 @@
         </section>
 
 
+        <!-- Footer -->
         <footer>
             <div class="container">
                 <div class="row">
@@ -324,13 +271,13 @@
                     <div class="col-md-5 margin-top-2 ">
                         <div class="footer-logo ">
                             <div class="footer-menu-text">
-                                <a href="">Головна</a>
+                                <a href="#">Головна</a>
                             </div>
                             <div class="footer-menu-text">
-                                <a href="">Ціни</a>
+                                <a href="ціна-ковки.html">Ціни</a>
                             </div>
                             <div class="footer-menu-text">
-                                <a href="">Контакти</a>
+                                <a href="контакти.html">Контакти</a>
                             </div>
                         </div>
                     </div>
@@ -338,14 +285,14 @@
                         <div class="footer-logo ">
                             <div class="footer-menu-text">
                                 <span class="contact-block__text">
-										<a href="tel:+380673144040">
-											<span class="material-icons"> call</span><span class="margin-left-5 ">(067) 31 44 040</span></a>
+                                    <a href="tel:+380673144040">
+                                        <span class="material-icons"> call</span><span class="margin-left-5 ">(067) 31 44 040</span></a>
                                 </span>
                             </div>
                             <div class="footer-menu-text">
                                 <span class="material-icons">
-										location_on
-										</span>Львів, вул. Зелена 238
+                                    location_on
+                                    </span>Львів, вул. Зелена 238
                                 </span>
                             </div>
                         </div>
@@ -367,7 +314,6 @@
         <script type='text/javascript' src='wp-content/themes/sirius-pro/assets/js/wow.min.js?ver=5.3.4'></script>
         <script type='text/javascript' src='wp-content/themes/sirius-pro/assets/js/sirius-anim.js?ver=5.3.4'></script>
         <script type='text/javascript' src='wp-includes/js/wp-embed.min.js?ver=5.3.4'></script>
-
 </body>
 
 </html>

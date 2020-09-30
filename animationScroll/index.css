@@ -13,9 +13,15 @@
 .fullscreen__title {
     font-size: 70px;
     margin: 0px 0px 20px 0px;
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
 }
 
-.fullscreen__title._active {}
+.fullscreen__title ._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
 
 .fullscreen__text {
     font-size: 30px;

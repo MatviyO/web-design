@@ -1,3 +1,54 @@
+html,
+body {
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+}
+
+a {
+    color: red;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 0px 0px 30px 0px;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+._anim-show {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+
+._anim-show ._active,
+._active ._anim-show {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.page {
+    background-color: #333;
+    position: relative;
+    z-index: 2;
+}
+
+._container {
+    max-width: 1400px;
+    padding: 0px 30px;
+    margin: 0 auto;
+}
+
+.fullscreen {
+    position: relative;
+    min-height: 100vh;
+}
+
 .fullscreen__content {
     z-index: 2;
     position: relative;
@@ -27,9 +78,16 @@
     font-size: 30px;
     line-height: 35px;
     max-width: 50%;
+    transform: translate(0px, 120%);
+    transition: all 0.8s ease 0s;
+    opacity: 0;
 }
 
-.fulscreen__text._active {}
+.fullscreen__text._active {
+    transform: translate(0px, 0px);
+    transition: all 0.8s ease 0.4s;
+    opacity: 1;
+}
 
 .fullscreen__image {
     position: relative;
@@ -37,4 +95,40 @@
     position: fixed;
     width: 100%;
     top: 0;
+}
+
+.text {
+    padding: 70px 0;
+}
+
+.text__container {}
+
+.text__title {
+    font-size: 40px;
+    margin: 0px 0px 30px 0px;
+}
+
+.text__item {
+    overflow: hidden;
+    margin: 0px 0px 25px 0px;
+}
+
+.text__item:last-child {
+    margin: 0;
+}
+
+.moments {
+    background-color: antiquewhite;
+    padding: 70px 0;
+}
+
+.moments__container {}
+
+.moments__items {
+    display: flex;
+    margin: 0px -20px;
+}
+
+.moments__item {
+    flex: 0 1 25%;
 }

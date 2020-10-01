@@ -18,7 +18,7 @@
     transition: all 0.8s ease 0s;
 }
 
-.fullscreen__title ._active {
+.fullscreen__title._active {
     transform: translate(0px, 0px);
     opacity: 1;
 }

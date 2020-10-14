@@ -74,10 +74,6 @@ h2 {
     opacity: 1;
 }
 
-
-
-
-
 .fullscreen__text {
     font-size: 30px;
     line-height: 35px;
@@ -216,7 +212,6 @@ h2 {
     transform: translate(0px, 0px);
 }
 
-
 .list__item li::before {
     width: 20px;
     height: 20px;
@@ -229,4 +224,4 @@ h2 {
 
 .list__item li:last-child {
     margin: 0;
-}  
+}
